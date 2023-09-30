@@ -1,33 +1,20 @@
 package org.example;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
-import org.jsoup.select.Elements;
-
-import java.awt.*;
 import java.io.*;
-import java.lang.reflect.InvocationTargetException;
-import java.net.HttpURLConnection;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-
+import java.net.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class App  {
 
-    private static String LINK = "https://ru.hexlet.io/qna/java/questions/kak-preobrazovat-massiv-char-v-string-java";
+    private static String LINK = "https://htmlbook.ru/samhtml/struktura-html-koda";
+    private static String WEBPAGE_TYPE = ".html";
 
-    public static void main(String[] args) throws IOException, URISyntaxException, InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+    public static void main(String[] args) throws IOException {
 
         ConvertLink();
-        Document document = Jsoup.connect(LINK).get();
-        PageParser parser = new PageParser(new URI(LINK));
+        WEBPAGE_TYPE = GetWebPageType(LINK);
+        PageDownloader("page");
     }
 
     private static void ConvertLink() {
@@ -40,5 +27,37 @@ public class App  {
                 break;
             LINK += (char)ByteLink[ByteLinkIndex];
         }
+    }
+
+    public static String GetWebPageType(String FileName) {
+
+        String WebPageType = FileName.substring(FileName.lastIndexOf('.'));
+        if(WebPageType.indexOf('/') != -1)
+            return ".html";
+
+        return FileName.substring(FileName.lastIndexOf('.'));
+    }
+
+    private static void PageDownloader(String FileName) throws IOException {
+
+        if(WEBPAGE_TYPE.equals(".html")) {
+
+            try {
+                PageParser parser = new PageParser(new URI(LINK));
+            } catch (Exception exception) {
+                System.out.println(exception.getMessage());
+            }
+        }
+
+        else
+            SimplePageDownloader(FileName);
+    }
+
+    private static void SimplePageDownloader(String FileName) throws IOException {
+
+        URL url = new URL(LINK);
+        URLConnection connection = url.openConnection();
+        InputStream stream = url.openStream();
+        Files.copy(stream, Paths.get("webparse/" + FileName + WEBPAGE_TYPE));
     }
 }

@@ -4,8 +4,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
-import java.io.IOException;
-import java.io.InputStream;
+
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URI;
 import java.net.URL;
@@ -19,14 +19,10 @@ public class PageParser {
     private URI link;
     private static Document document;
     private StringBuilder HTMLBuilder;
-    private List<String> ImgLinks;
-    private List<String> CSSLinks;
-    private List<List<Node>> JSLinks;
+    private List<LinkFile> Resources;
     public PageParser() {
 
-        this.ImgLinks = new ArrayList<>();
-        this.CSSLinks = new ArrayList<>();
-        this.JSLinks =  new ArrayList<>();
+        this.Resources = new ArrayList<>();
     }
     public PageParser(URI link) throws IOException, NoSuchMethodException, InvocationTargetException,
                                        IllegalAccessException {
@@ -34,24 +30,37 @@ public class PageParser {
         this.link = link;
         this.document = Jsoup.connect(String.valueOf(link)).get();
         this.HTMLBuilder = new StringBuilder(document.html());
-
-        this.ImgLinks = new ArrayList<>();
-        this.CSSLinks = new ArrayList<>();
-        this.JSLinks =  new ArrayList<>();
+        this.Resources = new ArrayList<>();
 
         ParseBlock("img");
-        ParseBlock("link");
         ParseBlock("script");
-//
-//        for(int i = 0; i < CSSLinks.size(); i++)
-//            save(CSSLinks.get(i), "css" + (i + 1) + ".css");
-        
-//        for(int i = 0; i < ImgLinks.size(); i++)
-//            save(ImgLinks.get(i), "img" + (i + 1) + ".svg");
+        ParseBlock("link");
 
+        Document doc = Jsoup.connect("https://htmlbook.ru/samhtml/struktura-html-koda").get();
+        String title = doc.html();
+
+        try {
+            FileWriter writer = new FileWriter("webparse/main.html", true);
+
+            writer.write(title);
+            writer.close();
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
+
+        for(int i = 0; i < Resources.size(); i++) {
+
+            try {
+                save(Resources.get(i));
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
-    public void ParseBlock(String ParseTag)
+    private void ParseBlock(String ParseTag)
            throws InvocationTargetException, IllegalAccessException {
 
         for(Element element : document.getElementsByTag(ParseTag)) {
@@ -59,15 +68,22 @@ public class PageParser {
             switch (ParseTag) {
 
                 case "img":
-                    ImgLinks.add(element.absUrl("src"));
+                    String file = element.attr("src");
+                    if(file.length() != 0 && file.substring(0, file.lastIndexOf('/')).indexOf('.') == -1 && file.substring(file.lastIndexOf('/')).indexOf('.') != -1)
+                        Resources.add(new LinkFile(element.absUrl("src"), file.substring(0, file.lastIndexOf('/')), file.substring(file.lastIndexOf('/'))));
                     break;
 
                 case "link":
-                    ParseCSS(element);
+                    String LinkPath = element.attr("href");
+                    if(LinkPath.length() != 0 && LinkPath.substring(0, LinkPath.lastIndexOf('/')).indexOf('.') == -1 && LinkPath.substring(LinkPath.lastIndexOf('/')).indexOf('.') != -1)
+                        Resources.add(new LinkFile(element.absUrl("href"), LinkPath.substring(0, LinkPath.lastIndexOf('/')), LinkPath.substring(LinkPath.lastIndexOf('/'))));
                     break;
 
                 case "script":
-                    JSLinks.add(element.childNodes());
+                    String file1 = element.attr("src");
+                    if(file1.length() != 0 && file1.substring(0, file1.lastIndexOf('/')).indexOf('.') == -1 && file1.substring(file1.lastIndexOf('/')).indexOf('.') != -1) {
+                        Resources.add(new LinkFile(element.absUrl("src"), file1.substring(0, file1.lastIndexOf('/')), file1.substring(file1.lastIndexOf('/'))));
+                    }
                     break;
 
                 default:
@@ -76,18 +92,12 @@ public class PageParser {
         }
     }
 
-    private void ParseCSS(Element element) {
+    private void save(LinkFile linkFile) throws IOException {
 
-        String href = element.absUrl("href");
-        if(href.substring(href.length() - 3, href.length()).equals("css"))
-            CSSLinks.add(href);
-    }
-
-    private void save(String link, String FileName) throws IOException {
-
-        URL url = new URL(link);
+        new File("./webparse" + linkFile.getPath()).mkdirs();
+        URL url = new URL(linkFile.getLink());
         URLConnection connection = url.openConnection();
         InputStream stream = url.openStream();
-        Files.copy(stream, Paths.get("webparse/" + FileName));
+        Files.copy(stream, Paths.get("./webparse" + linkFile.getPath() + linkFile.getName()));
     }
 }
