@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="alternate" type="application/rss+xml" title="Материалы с htmlbook.ru" href=".//feeds.feedburner.com/htmlbook">
+  <link rel="icon" type="image/svg+xml" href="./themes/hb/ico/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./themes/hb/ico/32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./themes/hb/ico/16x16.png">
+  <title>Структура HTML-кода | htmlbook.ru</title>
+  <link rel="stylesheet" media="all" href="./files/css/css_Oy1oVul0rak8ahYqjeyh-GHD20-UduLrC6HM3QVzTig.css">
+  <link rel="stylesheet" media="print" href="./files/css/css_pjXmjoElWEtVsEO2cptJQ_ishHiV5ZHVE8XIfBt0n_E.css">
+  <script>window.yaContextCb=window.yaContextCb||[]</script>
+  <script src=".https://yandex.ru/ads/system/context.js" async></script>
+  <script src=".https://cdn.adfinity.pro/code/htmlbook.ru/adfinity.js" charset="utf-8" async></script>
+  <script src="./themes/hb/js/metrika.js"></script>
+ </head>
+ <body>
+  <noscript>
+   <img src=".https://mc.yandex.ru/watch/94475397" style="position:absolute; left:-9999px;" alt="">
+  </noscript>
+  <header>
+   <a href="/" rel="home"><img src="./themes/hb/img/logo.svg" alt="htmlbook.ru" class="logo" width="184" height="66"></a>
+   <nav>
+    <ul id="topmenu">
+     <li class="hide"><a href="#main"><i class="icon icon-main"></i><br>
+       Основное</a></li>
+     <li class="show"><a href="#html"><i class="icon icon-html"></i><br>
+       HTML</a></li>
+     <li class="hide"><a href="#css"><i class="icon icon-css"></i><br>
+       CSS</a></li>
+     <li class="hide"><a href="#site"><i class="icon icon-site"></i><br>
+       Сайт</a></li>
+    </ul>
+    <div id="main" class="tile hide">
+     <ul>
+      <li><a href="/content">Статьи</a></li>
+      <li><a href="/blog">Блог</a></li>
+      <li><a href="/practical">Практикум</a></li>
+      <li><a href="//htmlforum.io">Форум</a></li>
+     </ul>
+    </div>
+    <div id="html" class="tile show">
+     <ul>
+      <li><a href="/samhtml" class="active">Самоучитель HTML</a></li>
+      <li><a href="/html">Справочник по HTML</a></li>
+      <li><a href="/xhtml">XHTML</a></li>
+      <li><a href="/html5">HTML5</a></li>
+     </ul>
+    </div>
+    <div id="css" class="tile hide">
+     <ul>
+      <li><a href="/samcss">Самоучитель CSS</a></li>
+      <li><a href="/css">Справочник по CSS</a></li>
+      <li><a href="/faq">Рецепты CSS</a></li>
+      <li><a href="/css3">CSS3</a></li>
+     </ul>
+    </div>
+    <div id="site" class="tile hide">
+     <ul>
+      <li><a href="/samlayout">Вёрстка веб-страниц</a></li>
+      <li><a href="/layout">Макеты</a></li>
+      <li><a href="/webserver">Веб-сервер</a></li>
+     </ul>
+    </div>
+   </nav>
+   <form action="/search/" id="cse-search-box">
+    <input type="text" name="as_q" id="q" autocomplete="off" placeholder="Поиск по сайту"><input type="image" src="/themes/hb/img/find.png" alt="Найти" class="find"><input type="hidden" name="cx" value="partner-pub-0708135098984815:pmy83axen1s"><input type="hidden" name="cof" value="FORID:9"><input type="hidden" name="ie" value="UTF-8">
+   </form>
+  </header>
+  <form action="/example/" method="post" id="codeform">
+   <input type="hidden" id="codetext" name="codetext" value="">
+  </form>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+   <div class="hb-layout layout">
+    <aside>
+     <div class="block" id="block-htmlbook-block-28">
+      <div class="block-content">
+       <div>
+        <form action="/sites/search/" id="filter">
+         <input type="search" name="q" id="ac" placeholder="Тег HTML или св-во CSS"><input type="image" src="/themes/hb/img/find.png" alt="Найти" class="find">
+        </form>
+       </div>
+      </div>
+     </div>
+     <div class="block" id="block-management">
+      <h2 class="block-title">Management</h2>
+      <div class="block-content"></div>
+     </div>
+     <div class="block" id="block-htmlbook-book-navigation">
+      <h2 class="block-title">Содержание</h2>
+      <div class="block-content">
+       <ul class="menu">
+        <li class="leaf"><a href="/samhtml/vvedenie-v-html" hreflang="ru">Введение в HTML</a></li>
+        <li class="leaf"><a href="/samhtml/instrumentariy" hreflang="ru">Инструментарий</a></li>
+        <li class="leaf collapsed"><a href="/samhtml/tegi" hreflang="ru">Теги</a></li>
+        <li class="leaf active-trail"><a href="/samhtml/struktura-html-koda" class="is-active" hreflang="ru">Структура HTML-кода</a></li>
+        <li class="leaf collapsed"><a href="/samhtml/tipy-tegov" hreflang="ru">Типы тегов</a></li>
+        <li class="leaf collapsed"><a href="/samhtml/znacheniya-atributov-tegov" hreflang="ru">Значения атрибутов тегов</a></li>
+        <li class="leaf collapsed"><a href="/samhtml/tekst" hreflang="ru">Текст</a></li>
+        <li class="leaf collapsed"><a href="/samhtml/ssylki" hreflang="ru">Ссылки</a></li>
+        <li class="leaf"><a href="/samhtml/yakorya" hreflang="ru">Якоря</a></li>
+        <li class="leaf collapsed"><a href="/samhtml/izobrazheniya" hreflang="ru">Изображения</a></li>
+        <li class="leaf collapsed"><a href="/samhtml/spiski" hreflang="ru">Списки</a></li>
+        <li class="leaf collapsed"><a href="/samhtml/tablitsy" hreflang="ru">Таблицы</a></li>
+        <li class="leaf collapsed"><a href="/samhtml/freymy" hreflang="ru">Фреймы</a></li>
+        <li class="leaf collapsed"><a href="/samhtml/validatsiya-dokumentov" hreflang="ru">Валидация документов</a></li>
+       </ul>
+      </div>
+     </div>
+     <div class="block" id="block-sape-2">
+      <div class="block-content">
+       <div>
+        <script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script> Открыть <a href="https://finterum.com/registratsiya-kompanii-v-paname/" target="_blank">панамские оффшоры</a> на выгодных условиях
+       </div>
+      </div>
+     </div>
+    </aside>
+    <div class="hb-columns">
+     <div class="block" id="block-htmlbook-block-16">
+      <div class="block-content">
+       <div>
+        <div class="adfinity_block_4591"></div>
+       </div>
+      </div>
+     </div>
+     <div class="hb-layout">
+      <div id="content" class="three-col">
+       <div class="block" id="block-content">
+        <div class="block-content">
+         <article role="article">
+          <h1><span>Структура HTML-кода</span></h1>
+          <div class="info">
+           <p class="date"><time datetime="2010-09-23T08:40:00">23.09.2010</time></p>
+           <p class="author">Влад Мержевич</p>
+          </div>
+          <p>Если открыть любую веб-страницу, то она будет содержать в себе типичные элементы, которые не меняются от вида и направленности сайта. В примере&nbsp;4.1 показан код простого документа, содержащего основные теги.</p>
+          <p class="exampleTitle2">Пример 4.1. Исходный код веб-страницы</p>
+          <pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+  &lt;title&gt;Пример веб-страницы&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Заголовок&lt;/h1&gt;
+  &lt;!-- Комментарий --&gt;
+  &lt;p&gt;Первый абзац.&lt;/p&gt;
+  &lt;p&gt;Второй абзац.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          <p>Скопируйте содержимое данного примера и сохраните его в папке c:\www\ под именем example41.html. После этого запустите браузер и откройте файл через пункт меню <span class="menuitem">Файл&nbsp;&gt; Открыть файл (Ctrl+O)</span>. В диалоговом окне выбора документа укажите файл example41.html. В браузере откроется веб-страница, показанная на рис.&nbsp;4.1.</p>
+          <p class="fig"><img src="./files/images/samhtml/fig_1_04_01.png" width="526" height="284" alt="Рис. 4.1"></p>
+          <p class="figsign">Рис. 4.1. Результат выполнения примера</p>
+          <p>Далее разберем отдельные строки нашего кода.</p>
+          <pre><code class="no-buttons">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</code></pre>
+          <p>Элемент <span class="tag">&lt;!DOCTYPE&gt;</span> предназначен для указания типа текущего документа&nbsp;— DTD (document type definition, описание типа документа). Это необходимо, чтобы браузер понимал, как следует интерпретировать текущую веб-страницу, ведь HTML существует в нескольких версиях, кроме того, имеется XHTML (EXtensible HyperText Markup Language, расширенный язык разметки гипертекста), похожий на HTML, но различающийся с ним по синтаксису. Чтобы браузер «не путался» и понимал, согласно какому стандарту отображать веб-страницу и необходимо в первой строке кода задавать <span class="tag">&lt;!DOCTYPE&gt;</span>.</p>
+          <div class="adfinity_block_4592"></div>
+          <p>Существует несколько видов <span class="tag">&lt;!DOCTYPE&gt;</span>, они различаются в зависимости от версии HTML, на которую ориентированы. В табл.&nbsp;4.1. приведены основные типы документов с их описанием.</p>
+          <table class="data">
+           <caption>
+            Табл. 4.1. Допустимые DTD
+           </caption>
+           <tbody>
+            <tr>
+             <th>DOCTYPE</th>
+             <th>Описание</th>
+            </tr>
+            <tr>
+             <td colspan="2"><strong>HTML 4.01</strong></td>
+            </tr>
+            <tr>
+             <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
+             <td>Строгий синтаксис HTML.</td>
+            </tr>
+            <tr>
+             <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
+             <td>Переходный синтаксис HTML.</td>
+            </tr>
+            <tr>
+             <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</td>
+             <td>В HTML-документе применяются фреймы.</td>
+            </tr>
+            <tr>
+             <td colspan="2"><strong>HTML 5</strong></td>
+            </tr>
+            <tr>
+             <td>&lt;!DOCTYPE html&gt;</td>
+             <td>В этой версии HTML только один доктайп.</td>
+            </tr>
+            <tr>
+             <td colspan="2"><strong>XHTML 1.0</strong></td>
+            </tr>
+            <tr>
+             <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+             <td>Строгий синтаксис XHTML.</td>
+            </tr>
+            <tr>
+             <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</td>
+             <td>Переходный синтаксис XHTML.</td>
+            </tr>
+            <tr>
+             <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</td>
+             <td>Документ написан на XHTML и содержит фреймы.</td>
+            </tr>
+            <tr>
+             <td colspan="2"><strong>XHTML 1.1</strong></td>
+            </tr>
+            <tr>
+             <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</td>
+             <td>Разработчики XHTML&nbsp;1.1 предполагают, что он постепенно вытеснит HTML. Как видите, никакого деления на виды это определение не имеет, поскольку синтаксис один и подчиняется четким правилам.</td>
+            </tr>
+           </tbody>
+          </table>
+          <p>Разница между строгим и переходным описанием документа состоит в различном подходе к написанию кода документа. Строгий HTML требует жесткого соблюдения спецификации HTML и не прощает ошибок. Переходный HTML более «спокойно» относится к некоторым огрехам кода, поэтому этот тип в определенных случаях использовать предпочтительнее.</p>
+          <p>Например, в строгом HTML и XHTML непременно требуется наличие тега <span class="tag">&lt;title&gt;</span>, а в переходном HTML его можно опустить и не указывать. При этом помним, что браузер в любом случае покажет документ, независимо от того, соответствует он синтаксису или нет. Подобная проверка осуществляется при помощи валидатора и предназначена в первую очередь для разработчиков, чтобы отслеживать ошибки в документе.</p>
+          <p>В дальнейшем будем применять преимущественно строгий <span class="tag">&lt;!DOCTYPE&gt;</span>, кроме случаев, когда это оговаривается особо. Это позволит нам избегать типичных ошибок и приучит к написанию синтаксически правильного кода.</p>
+          <p class="note">Часто можно встретить код HTML вообще без использования <span class="tag">&lt;!DOCTYPE&gt;</span>, веб-страница в подобном случае все равно будет показана. Тем не менее, может получиться, что один и тот же документ отображается в браузере по-разному при использовании <span class="tag">&lt;!DOCTYPE&gt;</span> и без него. Кроме того, браузеры могут по-своему показывать такие документы, в итоге страница «рассыплется», т.е. будет отображаться совсем не так, как это требуется разработчику. Чтобы не произошло подобных ситуаций, всегда добавляйте <span class="tag">&lt;!DOCTYPE&gt;</span> в начало документа.</p>
+          <pre><code class="no-buttons"> &lt;html&gt;</code></pre>
+          <p>Тег <span class="tag">&lt;html&gt;</span> определяет начало HTML-файла, внутри него хранится заголовок (<span class="tag">&lt;head&gt;</span>) и тело документа (<span class="tag">&lt;body&gt;</span>).</p>
+          <pre><code class="no-buttons"> &lt;head&gt;</code></pre>
+          <p>Заголовок документа, как еще называют блок <span class="tag">&lt;head&gt;</span>, может содержать текст и теги, но содержимое этого раздела не показывается напрямую на странице, за исключением контейнера <span class="tag">&lt;title&gt;</span>.</p>
+          <pre><code class="no-buttons"> &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;</code></pre>
+          <p>Тег <span class="tag">&lt;meta&gt;</span> является универсальным и добавляет целый класс возможностей, в частности, с помощью метатегов, как обобщенно называют этот тег, можно изменять кодировку страницы, добавлять ключевые слова, описание документа и многое другое. Чтобы браузер понимал, что имеет дело с кодировкой UTF-8 (Unicode transformation format, формат преобразования Юникод) и добавляется данная строка.</p>
+          <pre><code class="no-buttons"> &lt;title&gt;Пример веб-страницы&lt;/title&gt;</code></pre>
+          <p>Тег <span class="tag">&lt;title&gt;</span> определяет заголовок веб-страницы, это один из важных элементов предназначенный для решения множества задач. В операционной системе Windows текст заголовка отображается в левом верхнем углу окна браузера (рис.&nbsp;4.2).</p>
+          <p class="fig"><img src="./files/images/samhtml/fig_1_04_02.png" width="194" height="37" alt="Вид заголовка в браузере"></p>
+          <p class="figsign">Рис. 4.2. Вид заголовка в браузере</p>
+          <p class="note">Тег <span class="tag">&lt;title&gt;</span> является обязательным и должен непременно присутствовать в коде документа.</p>
+          <pre><code class="no-buttons">&lt;/head&gt;</code></pre>
+          <p>Обязательно следует добавлять закрывающий тег <span class="tag">&lt;/head&gt;</span>, чтобы показать, что блок заголовка документа завершен.</p>
+          <pre><code class="no-buttons">&lt;body&gt;</code></pre>
+          <p>Тело документа <span class="tag">&lt;body&gt;</span> предназначено для размещения тегов и содержательной части веб-страницы.</p>
+          <pre><code class="no-buttons">&lt;h1&gt;Заголовок&lt;/h1&gt;</code></pre>
+          <p>HTML предлагает шесть текстовых заголовков разного уровня, которые показывают относительную важность секции, расположенной после заголовка. Так, тег <span class="tag">&lt;h1&gt;</span> представляет собой наиболее важный заголовок первого уровня, а тег <span class="tag">&lt;h6&gt;</span> служит для обозначения заголовка шестого уровня и является наименее значительным. По умолчанию, заголовок первого уровня отображается самым крупным шрифтом жирного начертания, заголовки последующего уровня по размеру меньше. Теги <span class="tag">&lt;h1&gt;...&lt;h6&gt;</span> относятся к блочным элементам, они всегда начинаются с новой строки, а после них другие элементы отображаются на следующей строке. Кроме того, перед заголовком и после него добавляется пустое пространство.</p>
+          <pre><code class="no-buttons"> &lt;!-- Комментарий --&gt;</code></pre>
+          <p>Некоторый текст можно спрятать от показа в браузере, сделав его комментарием. Хотя такой текст пользователь не увидит, он все равно будет передаваться в документе, так что, посмотрев исходный код, можно обнаружить скрытые заметки.</p>
+          <p>Комментарии нужны для внесения в код своих записей, не влияющих на вид страницы. Начинаются они тегом <span class="tag">&lt;!--</span> и заканчиваются тегом <span class="tag">--&gt;</span>. Все, что находится между этими тегами, отображаться на веб-странице не будет.</p>
+          <pre><code class="no-buttons"> &lt;p&gt;Первый абзац.&lt;/p&gt;</code></pre>
+          <p>Тег <span class="tag">&lt;p&gt;</span> определяет абзац (параграф) текста. Если закрывающего тега нет, считается, что конец абзаца совпадает с началом следующего блочного элемента.</p>
+          <pre><code class="no-buttons"> &lt;p&gt;Второй абзац.&lt;/p&gt;</code></pre>
+          <p>Тег <span class="tag">&lt;p&gt;</span> является блочным элементом, поэтому текст всегда начинается с новой строки, абзацы идущие друг за другом разделяются между собой отбивкой (так называется пустое пространство между ними). Это хорошо видно на рис.&nbsp;4.1.</p>
+          <pre><code class="no-buttons">&lt;/body&gt;</code></pre>
+          <p>Следует добавить закрывающий тег <span class="tag">&lt;/body&gt;</span>, чтобы показать, что тело документа завершено.</p>
+          <pre><code class="no-buttons">&lt;/html&gt;</code></pre>
+          <p>Последним элементом в коде всегда идет закрывающий тег <span class="tag">&lt;/html&gt;</span>.</p>
+         </article>
+        </div>
+       </div>
+       <div id="similar">
+        <div class="block" id="block-views-block-similar-html">
+         <h2 class="block-title">HTML по теме</h2>
+         <div class="block-content">
+          <div>
+           <ul>
+            <li><a href="/html/%21--" hreflang="ru">Тег &lt;!-- --&gt;</a></li>
+            <li><a href="/html/body" hreflang="ru">Тег &lt;body&gt;</a></li>
+            <li><a href="/html/h1" hreflang="ru">Тег &lt;h1&gt;</a></li>
+            <li><a href="/html/head" hreflang="ru">Тег &lt;head&gt;</a></li>
+            <li><a href="/html/html" hreflang="ru">Тег &lt;html&gt;</a></li>
+            <li><a href="/html/meta" hreflang="ru">Тег &lt;meta&gt;</a></li>
+            <li><a href="/html/p" hreflang="ru">Тег &lt;p&gt;</a></li>
+            <li><a href="/html/%21doctype" hreflang="ru">Элемент &lt;!DOCTYPE&gt;</a></li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <div class="block" id="block-views-block-similar-practical">
+         <h2 class="block-title">Статьи по теме</h2>
+         <div class="block-content">
+          <div>
+           <ul>
+            <li><a href="/samhtml/struktura-html-koda" hreflang="ru">Структура HTML-кода</a></li>
+           </ul>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="block" id="block-htmlbook-block-26">
+        <div class="block-content">
+         <div>
+          <div id="yandex_rtb_R-A-31105-2" style="max-height: 300px"></div>
+          <script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-31105-2',
+    blockId: 'R-A-31105-2'
+  })
+})</script>
+         </div>
+        </div>
+       </div>
+       <p class="note comment-note">Не выкладывайте свой код напрямую в комментариях, он отображается некорректно. Воспользуйтесь сервисом <a href="//cssdeck.com/labs" rel="nofollow">cssdeck.com</a> или <a href="//jsfiddle.net" rel="nofollow">jsfiddle.net</a>, сохраните код и в комментариях дайте на него ссылку. Так и результат сразу увидят.</p>
+       <div id="disqus_thread"></div>
+       <script>
+var disqus_shortname = 'htmlbook';
+(function() {
+	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+      </div>
+      <div id="sidebar">
+       <div class="block" id="block-views-block-popular-faq">
+        <h2 class="block-title">Популярные рецепты</h2>
+        <div class="block-content">
+         <div>
+          <ul>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_img_0.png" width="16" height="16" alt=""><a href="/faq/kak-dobavit-kartinku-na-veb-stranitsu" hreflang="ru">Как добавить картинку на веб-страницу?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_site.png" width="16" height="16" alt=""><a href="/faq/kak-dobavit-ikonku-sayta-v-adresnuyu-stroku-brauzera" hreflang="ru">Как добавить иконку сайта в адресную строку браузера?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_background.png" width="16" height="16" alt=""><a href="/faq/kak-dobavit-fonovyy-risunok-na-veb-stranitsu" hreflang="ru">Как добавить фоновый рисунок на веб-страницу?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_img_3.png" width="16" height="16" alt=""><a href="/faq/kak-sdelat-obtekanie-kartinki-tekstom" hreflang="ru">Как сделать обтекание картинки текстом?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_background.png" width="16" height="16" alt=""><a href="/faq/kak-rastyanut-fon-na-vsyu-shirinu-okna" hreflang="ru">Как растянуть фон на всю ширину окна?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_img_3.png" width="16" height="16" alt=""><a href="/faq/kak-vyrovnyat-fotografiyu-po-tsentru-veb-stranitsy" hreflang="ru">Как выровнять фотографию по центру веб-страницы?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_list.png" width="16" height="16" alt=""><a href="/faq/kak-razmestit-elementy-spiska-gorizontalno" hreflang="ru">Как разместить элементы списка горизонтально?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_link.png" width="16" height="16" alt=""><a href="/faq/kak-ubrat-podcherkivanie-u-ssylok" hreflang="ru">Как убрать подчеркивание у ссылок?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_list_0.png" width="16" height="16" alt=""><a href="/faq/kak-ubrat-markery-v-markirovannom-spiske" hreflang="ru">Как убрать маркеры в маркированном списке?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_text.png" width="16" height="16" alt=""><a href="/faq/kak-izmenit-rasstoyanie-mezhdu-strokami-teksta" hreflang="ru">Как изменить расстояние между строками текста?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_img_4.png" width="16" height="16" alt=""><a href="/faq/kak-sdelat-chtoby-kartinka-menyalas-pri-navedenii-na-nee" hreflang="ru">Как сделать, чтобы картинка менялась при наведении на нее курсора мыши?</a></li>
+           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_link.png" width="16" height="16" alt=""><a href="/faq/kak-otkryt-ssylku-v-novom-okne" hreflang="ru">Как открыть ссылку в новом окне?</a></li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="block" id="block-views-block-popular-practical">
+        <h2 class="block-title">Популярные задачи</h2>
+        <div class="block-content">
+         <div>
+          <ul>
+           <li class="practical-popular"><a href="/practical/tex" hreflang="ru">TEX</a></li>
+           <li class="practical-popular"><a href="/practical/otstupy-mezhdu-blokov" hreflang="ru">Отступы между блоков</a></li>
+           <li class="practical-popular"><a href="/practical/android-v-teni" hreflang="ru">Андроид в тени</a></li>
+           <li class="practical-popular"><a href="/practical/ssylka-kak-knopka" hreflang="ru">Ссылка как кнопка</a></li>
+           <li class="practical-popular"><a href="/practical/vlozhennye-spiski" hreflang="ru">Вложенные списки</a></li>
+           <li class="practical-popular"><a href="/practical/forma-registratsii" hreflang="ru">Форма регистрации</a></li>
+           <li class="practical-popular"><a href="/practical/obedinenie-yacheek-tablitsy" hreflang="ru">Объединение ячеек таблицы</a></li>
+           <li class="practical-popular"><a href="/practical/obyazatelnye-polya-formy" hreflang="ru">Обязательные поля формы</a></li>
+           <li class="practical-popular"><a href="/practical/tsvet-i-fon-v-tablitse" hreflang="ru">Цвет и фон в таблице</a></li>
+           <li class="practical-popular"><a href="/practical/asuanskaya-plotina" hreflang="ru">Асуанская плотина</a></li>
+           <li class="practical-popular"><a href="/practical/batareyka" hreflang="ru">Батарейка</a></li>
+           <li class="practical-popular"><a href="/practical/zagolovki" hreflang="ru">Заголовки</a></li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="block" id="block-htmlbook-block-10">
+        <div class="block-content">
+         <div>
+          <div class="adfinity_block_4593"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <footer>
+   <section>
+    <h4>О сайте</h4>
+    <p><a href="/help">Помощь</a></p>
+    <p><a href="/about/copy">Копирование материалов</a></p>
+    <p><a href="/about/error">Борьба с ошибками</a></p>
+    <p><a href="/about/tech">Технологии</a></p>
+    <p><a href="/about/search">Поисковый плагин</a></p>
+   </section>
+   <section>
+    <h4>Основные разделы</h4>
+    <p><a href="/content">Статьи</a></p>
+    <p><a href="/blog">Блог</a></p>
+    <p><a href="/practical">Практикум</a></p>
+    <p><a href="/books">Цифровые книги</a></p>
+    <p><a href="//htmlforum.io" rel="nofollow">Форум</a></p>
+   </section>
+   <section>
+    <h4>HTML</h4>
+    <p><a href="/samhtml">Самоучитель HTML</a></p>
+    <p><a href="/xhtml">XHTML</a></p>
+    <p><a href="/html">Справочник по HTML</a></p>
+    <p><a href="/html5">HTML5</a></p>
+   </section>
+   <section>
+    <h4>CSS</h4>
+    <p><a href="/samcss">Самоучитель CSS</a></p>
+    <p><a href="/css">Справочник по CSS</a></p>
+    <p><a href="/faq">Рецепты CSS</a></p>
+    <p><a href="/css3">CSS3</a></p>
+   </section>
+   <section>
+    <h4>Сайт</h4>
+    <p><a href="/samlayout">Вёрстка</a></p>
+    <p><a href="/layout">Макеты</a></p>
+    <p><a href="/webserver">Веб-сервер</a></p>
+   </section>
+   <section class="hosting">
+    <a href="https://timeweb.com/ru/"><img src="./themes/hb/img/timeweb.svg" width="150"> htmlbook.ru использует хостинг timeweb</a>
+   </section>
+   <p class="li">
+    <script src="./themes/hb/js/li.js"></script></p>
+   <p class="copyright">© 2002–2023 Влад Мержевич, по всем вопросам пишите по адресу vlad@htmlbook.ru</p>
+   <p><a href="http://feeds.feedburner.com/htmlbook" rel="nofollow">Подпишитесь на материалы сайта по RSS</a></p>
+  </footer>
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/9","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"ru"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"statistics":{"data":{"nid":"9"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"ab8c70fba0340cdf0f780210147b7b0208b1737c62537ff5cafe47aa595dc7f6"}}</script>
+  <script src="./files/js/js_8QOHiYR2jCL6ldpjlWyzVqRiMmYOat4xJroV85AgrZQ.js"></script>
+  <script src="./themes/hb/js/ads.js"></script>
+ </body>
+</html>

@@ -36,20 +36,6 @@ public class PageParser {
         ParseBlock("script");
         ParseBlock("link");
 
-        Document doc = Jsoup.connect("https://htmlbook.ru/samhtml/struktura-html-koda").get();
-        String title = doc.html();
-
-        try {
-            FileWriter writer = new FileWriter("webparse/main.html", true);
-
-            writer.write(title);
-            writer.close();
-
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-
         for(int i = 0; i < Resources.size(); i++) {
 
             try {
@@ -57,6 +43,28 @@ public class PageParser {
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
+        }
+
+        document = Jsoup.connect("https://htmlbook.ru/samhtml/struktura-html-koda").get();
+        for(Element img : document.select("img[src]"))
+            img.attr("src", "." + img.attr("src"));
+
+        for(Element css : document.select("link[href]"))
+            css.attr("href", "." + css.attr("href"));
+
+        for(Element css : document.select("script[src]"))
+            css.attr("src", "." + css.attr("src"));
+
+        String s = document.html();
+
+        try {
+            FileWriter writer = new FileWriter("./webparse/main.html", true);
+
+            writer.write(s);
+            writer.close();
+
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -94,10 +102,24 @@ public class PageParser {
 
     private void save(LinkFile linkFile) throws IOException {
 
+//        new File("./webparse" + linkFile.getPath()).mkdirs();
+//        URL url = new URL(linkFile.getLink());
+//        URLConnection connection = url.openConnection();
+//        InputStream stream = url.openStream();
+//        Files.copy(stream, Paths.get("./webparse" + linkFile.getPath() + linkFile.getName()));
+
+
         new File("./webparse" + linkFile.getPath()).mkdirs();
         URL url = new URL(linkFile.getLink());
         URLConnection connection = url.openConnection();
-        InputStream stream = url.openStream();
-        Files.copy(stream, Paths.get("./webparse" + linkFile.getPath() + linkFile.getName()));
+        InputStream in = url.openStream();
+        BufferedInputStream bis = new BufferedInputStream(in);
+        FileOutputStream fos = new FileOutputStream("./webparse" + linkFile.getPath() + linkFile.getName());
+
+            byte[] data = new byte[1024];
+            int count;
+            while ((count = bis.read(data, 0, 1024)) != -1) {
+                fos.write(data, 0, count);
+            }
     }
 }
