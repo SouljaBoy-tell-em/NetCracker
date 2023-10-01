@@ -1,411 +1,723 @@
-<!doctype html>
-<html lang="ru">
+<!doctype html><!-- [container] [name: mainnew] -->
+<html lang="ru-RU">
  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="alternate" type="application/rss+xml" title="Материалы с htmlbook.ru" href=".//feeds.feedburner.com/htmlbook">
-  <link rel="icon" type="image/svg+xml" href="./themes/hb/ico/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="./themes/hb/ico/32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./themes/hb/ico/16x16.png">
-  <title>Структура HTML-кода | htmlbook.ru</title>
-  <link rel="stylesheet" media="all" href="./files/css/css_Oy1oVul0rak8ahYqjeyh-GHD20-UduLrC6HM3QVzTig.css">
-  <link rel="stylesheet" media="print" href="./files/css/css_pjXmjoElWEtVsEO2cptJQ_ishHiV5ZHVE8XIfBt0n_E.css">
-  <script>window.yaContextCb=window.yaContextCb||[]</script>
-  <script src=".https://yandex.ru/ads/system/context.js" async></script>
-  <script src=".https://cdn.adfinity.pro/code/htmlbook.ru/adfinity.js" charset="utf-8" async></script>
-  <script src="./themes/hb/js/metrika.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=6">
+  <title>CSS / HTML верстка сайта - примеры верстки</title>
+  <meta name="description" content="Интересные рещения для разработки верстки сайтов на CSS / HTML. Работчие примеры кода.">
+  <meta property="og:title" content="CSS / HTML верстка сайта - примеры верстки">
+  <meta property="og:url" content="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html/">
+  <meta property="og:image" content="https://xn----7sbbaqhlkm9ah9aiq.net/images/logo-dark.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="xn----7sbbaqhlkm9ah9aiq.net">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:description" content="Интересные рещения для разработки верстки сайтов на CSS / HTML. Работчие примеры кода.">
+  <link rel="canonical" href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html/">
+  <meta name="google-site-verification" content="ZEB8Aph6Px9gzaCh9dmYcSU58D5p9HtuxuDyI3BrFn4">
+  <link rel="icon" href="./images/favicon.svg" sizes="any" type="image/svg+xml">
+  <script>var BASESITE = "https://xn----7sbbaqhlkm9ah9aiq.net/";</script>
+  <script type="text/javascript">var theme_url = '';</script>
+  <link rel="preload" href="./fonts/fy16iFMh.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/PFDinDisplayProRegular.woff2" as="font" type="font/woff2" crossorigin>
  </head>
- <body>
-  <noscript>
-   <img src=".https://mc.yandex.ru/watch/94475397" style="position:absolute; left:-9999px;" alt="">
-  </noscript>
-  <header>
-   <a href="/" rel="home"><img src="./themes/hb/img/logo.svg" alt="htmlbook.ru" class="logo" width="184" height="66"></a>
-   <nav>
-    <ul id="topmenu">
-     <li class="hide"><a href="#main"><i class="icon icon-main"></i><br>
-       Основное</a></li>
-     <li class="show"><a href="#html"><i class="icon icon-html"></i><br>
-       HTML</a></li>
-     <li class="hide"><a href="#css"><i class="icon icon-css"></i><br>
-       CSS</a></li>
-     <li class="hide"><a href="#site"><i class="icon icon-site"></i><br>
-       Сайт</a></li>
-    </ul>
-    <div id="main" class="tile hide">
-     <ul>
-      <li><a href="/content">Статьи</a></li>
-      <li><a href="/blog">Блог</a></li>
-      <li><a href="/practical">Практикум</a></li>
-      <li><a href="//htmlforum.io">Форум</a></li>
-     </ul>
+ <body class="home page">
+  <header id="hea">
+   <div class="container clearfix" id="block_1">
+    <!-- [block: block_1] --> <!-- menunew/ancient --><!-- [name: menunew] -->
+    <div class="logo">
+     <a href="https://xn----7sbbaqhlkm9ah9aiq.net/"><img class="imgr lazy" data-src="/images/logo.svg" alt="Создание сайтов в ABCname" title="Разработать сайт от создание-сайта.net" width="200" height="43"></a>
     </div>
-    <div id="html" class="tile show">
-     <ul>
-      <li><a href="/samhtml" class="active">Самоучитель HTML</a></li>
-      <li><a href="/html">Справочник по HTML</a></li>
-      <li><a href="/xhtml">XHTML</a></li>
-      <li><a href="/html5">HTML5</a></li>
-     </ul>
+    <div class="info">
+     <div class="icon-Phone alt-font">
+      <a href="tel:+380966622741">(096) 662-27-41</a>
+     </div>
+     <div class="region"></div>
     </div>
-    <div id="css" class="tile hide">
-     <ul>
-      <li><a href="/samcss">Самоучитель CSS</a></li>
-      <li><a href="/css">Справочник по CSS</a></li>
-      <li><a href="/faq">Рецепты CSS</a></li>
-      <li><a href="/css3">CSS3</a></li>
-     </ul>
+    <div class="hamburger js-navigation-open">
+     <div class="line line-1"></div>
+     <div class="line line-2"></div>
+     <div class="line line-3"></div>
     </div>
-    <div id="site" class="tile hide">
-     <ul>
-      <li><a href="/samlayout">Вёрстка веб-страниц</a></li>
-      <li><a href="/layout">Макеты</a></li>
-      <li><a href="/webserver">Веб-сервер</a></li>
-     </ul>
-    </div>
-   </nav>
-   <form action="/search/" id="cse-search-box">
-    <input type="text" name="as_q" id="q" autocomplete="off" placeholder="Поиск по сайту"><input type="image" src="/themes/hb/img/find.png" alt="Найти" class="find"><input type="hidden" name="cx" value="partner-pub-0708135098984815:pmy83axen1s"><input type="hidden" name="cof" value="FORID:9"><input type="hidden" name="ie" value="UTF-8">
-   </form>
-  </header>
-  <form action="/example/" method="post" id="codeform">
-   <input type="hidden" id="codetext" name="codetext" value="">
-  </form>
-  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-   <div class="hb-layout layout">
-    <aside>
-     <div class="block" id="block-htmlbook-block-28">
-      <div class="block-content">
+    <div class="oback"></div>
+    <div class="overn">
+     <div class="container narrow">
+      <div class="top">
+       <div class="left">
+        <a class="h1 lk anel ande-1" href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/"><span>Разработка сайтов</span></a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-internet-magazina/" class="lchil anel"><span>Интернет магазин</span></a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-korporativnogo-sayta/" class="lchil anel"><span>Корпоративный сайт</span></a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-sayta-kataloga/" class="lchil anel"><span>Сайт каталог</span></a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-sayta-vizitki/" class="lchil anel"><span>Сайт визитка</span></a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sazdanie-landing-page/" class="lchil anel"><span>Landing page</span></a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-eksklyuzivnogo-proekta/" class="lchil anel"><span>Эксклюзивный проект</span></a> <a class="h1 lk anel ande-1" href="https://xn----7sbbaqhlkm9ah9aiq.net/services-new/"><span>Услуги</span></a> <a class="h1 lk anel ande-1" href="https://xn----7sbbaqhlkm9ah9aiq.net/portfolio-new/"><span>Наши работы</span></a> <a class="h1 lk anel ande-1" href="https://xn----7sbbaqhlkm9ah9aiq.net/zakazat-sayt/"><span>Заказать сайт</span></a> <a class="h1 lk anel ande-1" href="https://xn----7sbbaqhlkm9ah9aiq.net/contacts-new/"><span>Контакты</span></a>
+       </div>
+       <div class="right">
+        <a class="h1 lk anel ande-1" href="https://xn----7sbbaqhlkm9ah9aiq.net/info/"><span>Информация</span></a> <a href="/news-new/" class="lchil anel"><span>Блоги, статьи, новости</span></a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/faq/" class="lchil anel"><span>Вопросы</span></a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/instructions-cmsdk/" class="lchil anel"><span>Инструкции</span></a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/otzyvy/" class="lchil anel"><span>Отзывы</span></a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/nasha-komanda/" class="lchil anel"><span>Наша команда</span></a>
+       </div>
+      </div>
+      <div class="btn anel ande-10">
        <div>
-        <form action="/sites/search/" id="filter">
-         <input type="search" name="q" id="ac" placeholder="Тег HTML или св-во CSS"><input type="image" src="/themes/hb/img/find.png" alt="Найти" class="find">
-        </form>
+        <a href="tel:+380966622741">+38 (096) 662-27-41</a>
        </div>
-      </div>
-     </div>
-     <div class="block" id="block-management">
-      <h2 class="block-title">Management</h2>
-      <div class="block-content"></div>
-     </div>
-     <div class="block" id="block-htmlbook-book-navigation">
-      <h2 class="block-title">Содержание</h2>
-      <div class="block-content">
-       <ul class="menu">
-        <li class="leaf"><a href="/samhtml/vvedenie-v-html" hreflang="ru">Введение в HTML</a></li>
-        <li class="leaf"><a href="/samhtml/instrumentariy" hreflang="ru">Инструментарий</a></li>
-        <li class="leaf collapsed"><a href="/samhtml/tegi" hreflang="ru">Теги</a></li>
-        <li class="leaf active-trail"><a href="/samhtml/struktura-html-koda" class="is-active" hreflang="ru">Структура HTML-кода</a></li>
-        <li class="leaf collapsed"><a href="/samhtml/tipy-tegov" hreflang="ru">Типы тегов</a></li>
-        <li class="leaf collapsed"><a href="/samhtml/znacheniya-atributov-tegov" hreflang="ru">Значения атрибутов тегов</a></li>
-        <li class="leaf collapsed"><a href="/samhtml/tekst" hreflang="ru">Текст</a></li>
-        <li class="leaf collapsed"><a href="/samhtml/ssylki" hreflang="ru">Ссылки</a></li>
-        <li class="leaf"><a href="/samhtml/yakorya" hreflang="ru">Якоря</a></li>
-        <li class="leaf collapsed"><a href="/samhtml/izobrazheniya" hreflang="ru">Изображения</a></li>
-        <li class="leaf collapsed"><a href="/samhtml/spiski" hreflang="ru">Списки</a></li>
-        <li class="leaf collapsed"><a href="/samhtml/tablitsy" hreflang="ru">Таблицы</a></li>
-        <li class="leaf collapsed"><a href="/samhtml/freymy" hreflang="ru">Фреймы</a></li>
-        <li class="leaf collapsed"><a href="/samhtml/validatsiya-dokumentov" hreflang="ru">Валидация документов</a></li>
-       </ul>
-      </div>
-     </div>
-     <div class="block" id="block-sape-2">
-      <div class="block-content">
        <div>
-        <script type="text/javascript">
-<!--
-var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
-//-->
-</script> Открыть <a href="https://finterum.com/registratsiya-kompanii-v-paname/" target="_blank">панамские оффшоры</a> на выгодных условиях
+        <a href="mailto:info@abcname.net">info@abcname.net</a>
        </div>
-      </div>
-     </div>
-    </aside>
-    <div class="hb-columns">
-     <div class="block" id="block-htmlbook-block-16">
-      <div class="block-content">
        <div>
-        <div class="adfinity_block_4591"></div>
+        <div class="language">
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/ua/">UA</a><span>/</span> <span class="active">RU</span>
+        </div>
+       </div>
+       <div class="social-links">
+        <a class="lk" href="viber://chat?number=%2B380634823200" target="_blank"> <img src="./images/viber.svg" width="42" height="42" alt="viber"> </a> <a class="lk" href="https://telegram.me/ABCnameAndrey" target="_blank"> <img src="./images/tele.svg" width="42" height="42" alt="telegram"> </a> <a class="lk" href="https://wa.me/380634823200?text=Здравствуйте.%20Вопрос%20по%20поводу%20сайта." target="_blank"> <img src="./images/whatsapp.svg" width="42" height="42" alt="whatsapp"> </a>
        </div>
       </div>
      </div>
-     <div class="hb-layout">
-      <div id="content" class="three-col">
-       <div class="block" id="block-content">
-        <div class="block-content">
-         <article role="article">
-          <h1><span>Структура HTML-кода</span></h1>
-          <div class="info">
-           <p class="date"><time datetime="2010-09-23T08:40:00">23.09.2010</time></p>
-           <p class="author">Влад Мержевич</p>
-          </div>
-          <p>Если открыть любую веб-страницу, то она будет содержать в себе типичные элементы, которые не меняются от вида и направленности сайта. В примере&nbsp;4.1 показан код простого документа, содержащего основные теги.</p>
-          <p class="exampleTitle2">Пример 4.1. Исходный код веб-страницы</p>
-          <pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
-&lt;html&gt;
- &lt;head&gt;
-  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
-  &lt;title&gt;Пример веб-страницы&lt;/title&gt;
- &lt;/head&gt;
- &lt;body&gt;
-  &lt;h1&gt;Заголовок&lt;/h1&gt;
-  &lt;!-- Комментарий --&gt;
-  &lt;p&gt;Первый абзац.&lt;/p&gt;
-  &lt;p&gt;Второй абзац.&lt;/p&gt;
- &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-          <p>Скопируйте содержимое данного примера и сохраните его в папке c:\www\ под именем example41.html. После этого запустите браузер и откройте файл через пункт меню <span class="menuitem">Файл&nbsp;&gt; Открыть файл (Ctrl+O)</span>. В диалоговом окне выбора документа укажите файл example41.html. В браузере откроется веб-страница, показанная на рис.&nbsp;4.1.</p>
-          <p class="fig"><img src="./files/images/samhtml/fig_1_04_01.png" width="526" height="284" alt="Рис. 4.1"></p>
-          <p class="figsign">Рис. 4.1. Результат выполнения примера</p>
-          <p>Далее разберем отдельные строки нашего кода.</p>
-          <pre><code class="no-buttons">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</code></pre>
-          <p>Элемент <span class="tag">&lt;!DOCTYPE&gt;</span> предназначен для указания типа текущего документа&nbsp;— DTD (document type definition, описание типа документа). Это необходимо, чтобы браузер понимал, как следует интерпретировать текущую веб-страницу, ведь HTML существует в нескольких версиях, кроме того, имеется XHTML (EXtensible HyperText Markup Language, расширенный язык разметки гипертекста), похожий на HTML, но различающийся с ним по синтаксису. Чтобы браузер «не путался» и понимал, согласно какому стандарту отображать веб-страницу и необходимо в первой строке кода задавать <span class="tag">&lt;!DOCTYPE&gt;</span>.</p>
-          <div class="adfinity_block_4592"></div>
-          <p>Существует несколько видов <span class="tag">&lt;!DOCTYPE&gt;</span>, они различаются в зависимости от версии HTML, на которую ориентированы. В табл.&nbsp;4.1. приведены основные типы документов с их описанием.</p>
-          <table class="data">
-           <caption>
-            Табл. 4.1. Допустимые DTD
-           </caption>
-           <tbody>
-            <tr>
-             <th>DOCTYPE</th>
-             <th>Описание</th>
-            </tr>
-            <tr>
-             <td colspan="2"><strong>HTML 4.01</strong></td>
-            </tr>
-            <tr>
-             <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-             <td>Строгий синтаксис HTML.</td>
-            </tr>
-            <tr>
-             <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-             <td>Переходный синтаксис HTML.</td>
-            </tr>
-            <tr>
-             <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</td>
-             <td>В HTML-документе применяются фреймы.</td>
-            </tr>
-            <tr>
-             <td colspan="2"><strong>HTML 5</strong></td>
-            </tr>
-            <tr>
-             <td>&lt;!DOCTYPE html&gt;</td>
-             <td>В этой версии HTML только один доктайп.</td>
-            </tr>
-            <tr>
-             <td colspan="2"><strong>XHTML 1.0</strong></td>
-            </tr>
-            <tr>
-             <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-             <td>Строгий синтаксис XHTML.</td>
-            </tr>
-            <tr>
-             <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</td>
-             <td>Переходный синтаксис XHTML.</td>
-            </tr>
-            <tr>
-             <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</td>
-             <td>Документ написан на XHTML и содержит фреймы.</td>
-            </tr>
-            <tr>
-             <td colspan="2"><strong>XHTML 1.1</strong></td>
-            </tr>
-            <tr>
-             <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</td>
-             <td>Разработчики XHTML&nbsp;1.1 предполагают, что он постепенно вытеснит HTML. Как видите, никакого деления на виды это определение не имеет, поскольку синтаксис один и подчиняется четким правилам.</td>
-            </tr>
-           </tbody>
-          </table>
-          <p>Разница между строгим и переходным описанием документа состоит в различном подходе к написанию кода документа. Строгий HTML требует жесткого соблюдения спецификации HTML и не прощает ошибок. Переходный HTML более «спокойно» относится к некоторым огрехам кода, поэтому этот тип в определенных случаях использовать предпочтительнее.</p>
-          <p>Например, в строгом HTML и XHTML непременно требуется наличие тега <span class="tag">&lt;title&gt;</span>, а в переходном HTML его можно опустить и не указывать. При этом помним, что браузер в любом случае покажет документ, независимо от того, соответствует он синтаксису или нет. Подобная проверка осуществляется при помощи валидатора и предназначена в первую очередь для разработчиков, чтобы отслеживать ошибки в документе.</p>
-          <p>В дальнейшем будем применять преимущественно строгий <span class="tag">&lt;!DOCTYPE&gt;</span>, кроме случаев, когда это оговаривается особо. Это позволит нам избегать типичных ошибок и приучит к написанию синтаксически правильного кода.</p>
-          <p class="note">Часто можно встретить код HTML вообще без использования <span class="tag">&lt;!DOCTYPE&gt;</span>, веб-страница в подобном случае все равно будет показана. Тем не менее, может получиться, что один и тот же документ отображается в браузере по-разному при использовании <span class="tag">&lt;!DOCTYPE&gt;</span> и без него. Кроме того, браузеры могут по-своему показывать такие документы, в итоге страница «рассыплется», т.е. будет отображаться совсем не так, как это требуется разработчику. Чтобы не произошло подобных ситуаций, всегда добавляйте <span class="tag">&lt;!DOCTYPE&gt;</span> в начало документа.</p>
-          <pre><code class="no-buttons"> &lt;html&gt;</code></pre>
-          <p>Тег <span class="tag">&lt;html&gt;</span> определяет начало HTML-файла, внутри него хранится заголовок (<span class="tag">&lt;head&gt;</span>) и тело документа (<span class="tag">&lt;body&gt;</span>).</p>
-          <pre><code class="no-buttons"> &lt;head&gt;</code></pre>
-          <p>Заголовок документа, как еще называют блок <span class="tag">&lt;head&gt;</span>, может содержать текст и теги, но содержимое этого раздела не показывается напрямую на странице, за исключением контейнера <span class="tag">&lt;title&gt;</span>.</p>
-          <pre><code class="no-buttons"> &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;</code></pre>
-          <p>Тег <span class="tag">&lt;meta&gt;</span> является универсальным и добавляет целый класс возможностей, в частности, с помощью метатегов, как обобщенно называют этот тег, можно изменять кодировку страницы, добавлять ключевые слова, описание документа и многое другое. Чтобы браузер понимал, что имеет дело с кодировкой UTF-8 (Unicode transformation format, формат преобразования Юникод) и добавляется данная строка.</p>
-          <pre><code class="no-buttons"> &lt;title&gt;Пример веб-страницы&lt;/title&gt;</code></pre>
-          <p>Тег <span class="tag">&lt;title&gt;</span> определяет заголовок веб-страницы, это один из важных элементов предназначенный для решения множества задач. В операционной системе Windows текст заголовка отображается в левом верхнем углу окна браузера (рис.&nbsp;4.2).</p>
-          <p class="fig"><img src="./files/images/samhtml/fig_1_04_02.png" width="194" height="37" alt="Вид заголовка в браузере"></p>
-          <p class="figsign">Рис. 4.2. Вид заголовка в браузере</p>
-          <p class="note">Тег <span class="tag">&lt;title&gt;</span> является обязательным и должен непременно присутствовать в коде документа.</p>
-          <pre><code class="no-buttons">&lt;/head&gt;</code></pre>
-          <p>Обязательно следует добавлять закрывающий тег <span class="tag">&lt;/head&gt;</span>, чтобы показать, что блок заголовка документа завершен.</p>
-          <pre><code class="no-buttons">&lt;body&gt;</code></pre>
-          <p>Тело документа <span class="tag">&lt;body&gt;</span> предназначено для размещения тегов и содержательной части веб-страницы.</p>
-          <pre><code class="no-buttons">&lt;h1&gt;Заголовок&lt;/h1&gt;</code></pre>
-          <p>HTML предлагает шесть текстовых заголовков разного уровня, которые показывают относительную важность секции, расположенной после заголовка. Так, тег <span class="tag">&lt;h1&gt;</span> представляет собой наиболее важный заголовок первого уровня, а тег <span class="tag">&lt;h6&gt;</span> служит для обозначения заголовка шестого уровня и является наименее значительным. По умолчанию, заголовок первого уровня отображается самым крупным шрифтом жирного начертания, заголовки последующего уровня по размеру меньше. Теги <span class="tag">&lt;h1&gt;...&lt;h6&gt;</span> относятся к блочным элементам, они всегда начинаются с новой строки, а после них другие элементы отображаются на следующей строке. Кроме того, перед заголовком и после него добавляется пустое пространство.</p>
-          <pre><code class="no-buttons"> &lt;!-- Комментарий --&gt;</code></pre>
-          <p>Некоторый текст можно спрятать от показа в браузере, сделав его комментарием. Хотя такой текст пользователь не увидит, он все равно будет передаваться в документе, так что, посмотрев исходный код, можно обнаружить скрытые заметки.</p>
-          <p>Комментарии нужны для внесения в код своих записей, не влияющих на вид страницы. Начинаются они тегом <span class="tag">&lt;!--</span> и заканчиваются тегом <span class="tag">--&gt;</span>. Все, что находится между этими тегами, отображаться на веб-странице не будет.</p>
-          <pre><code class="no-buttons"> &lt;p&gt;Первый абзац.&lt;/p&gt;</code></pre>
-          <p>Тег <span class="tag">&lt;p&gt;</span> определяет абзац (параграф) текста. Если закрывающего тега нет, считается, что конец абзаца совпадает с началом следующего блочного элемента.</p>
-          <pre><code class="no-buttons"> &lt;p&gt;Второй абзац.&lt;/p&gt;</code></pre>
-          <p>Тег <span class="tag">&lt;p&gt;</span> является блочным элементом, поэтому текст всегда начинается с новой строки, абзацы идущие друг за другом разделяются между собой отбивкой (так называется пустое пространство между ними). Это хорошо видно на рис.&nbsp;4.1.</p>
-          <pre><code class="no-buttons">&lt;/body&gt;</code></pre>
-          <p>Следует добавить закрывающий тег <span class="tag">&lt;/body&gt;</span>, чтобы показать, что тело документа завершено.</p>
-          <pre><code class="no-buttons">&lt;/html&gt;</code></pre>
-          <p>Последним элементом в коде всегда идет закрывающий тег <span class="tag">&lt;/html&gt;</span>.</p>
-         </article>
-        </div>
+    </div>
+    <nav class="header">
+     <nav class="main-nav">
+      <div class="lk parent">
+       <span><a href="https://xn----7sbbaqhlkm9ah9aiq.net/sozdanie-saytov-ukraine/kiev/">Разработка сайтов</a></span>
+       <div class="chitem">
+        <a href="https://xn----7sbbaqhlkm9ah9aiq.net/sozdanie-internet-magazinov-ukraine/kiev/" class="lk">Интернет магазин</a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-korporativnogo-sayta/" class="lk">Корпоративный сайт</a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-sayta-kataloga/" class="lk">Сайт каталог</a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-sayta-vizitki/" class="lk">Сайт визитка</a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sazdanie-landing-page/" class="lk">Landing page</a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-eksklyuzivnogo-proekta/" class="lk">Эксклюзивный проект</a>
        </div>
-       <div id="similar">
-        <div class="block" id="block-views-block-similar-html">
-         <h2 class="block-title">HTML по теме</h2>
-         <div class="block-content">
-          <div>
-           <ul>
-            <li><a href="/html/%21--" hreflang="ru">Тег &lt;!-- --&gt;</a></li>
-            <li><a href="/html/body" hreflang="ru">Тег &lt;body&gt;</a></li>
-            <li><a href="/html/h1" hreflang="ru">Тег &lt;h1&gt;</a></li>
-            <li><a href="/html/head" hreflang="ru">Тег &lt;head&gt;</a></li>
-            <li><a href="/html/html" hreflang="ru">Тег &lt;html&gt;</a></li>
-            <li><a href="/html/meta" hreflang="ru">Тег &lt;meta&gt;</a></li>
-            <li><a href="/html/p" hreflang="ru">Тег &lt;p&gt;</a></li>
-            <li><a href="/html/%21doctype" hreflang="ru">Элемент &lt;!DOCTYPE&gt;</a></li>
-           </ul>
-          </div>
-         </div>
-        </div>
-        <div class="block" id="block-views-block-similar-practical">
-         <h2 class="block-title">Статьи по теме</h2>
-         <div class="block-content">
-          <div>
-           <ul>
-            <li><a href="/samhtml/struktura-html-koda" hreflang="ru">Структура HTML-кода</a></li>
-           </ul>
-          </div>
-         </div>
-        </div>
+      </div><a href="https://xn----7sbbaqhlkm9ah9aiq.net/services-new/" class="lk">Услуги</a><a href="https://xn----7sbbaqhlkm9ah9aiq.net/portfolio-new/" class="lk">Наши работы</a><a href="https://xn----7sbbaqhlkm9ah9aiq.net/zakazat-sayt/" class="lk">Заказать сайт</a>
+      <div class="lk parent">
+       <span>Информация</span>
+       <div class="chitem">
+        <a href="/news-new/" class="lk">Блоги, статьи, новости</a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/faq/" class="lk">Вопросы</a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/instructions-cmsdk/" class="lk">Инструкции</a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/otzyvy/" class="lk">Отзывы</a> <a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/nasha-komanda/" class="lk">Наша команда</a>
        </div>
-       <div class="block" id="block-htmlbook-block-26">
-        <div class="block-content">
-         <div>
-          <div id="yandex_rtb_R-A-31105-2" style="max-height: 300px"></div>
-          <script>window.yaContextCb.push(()=>{
-  Ya.Context.AdvManager.render({
-    renderTo: 'yandex_rtb_R-A-31105-2',
-    blockId: 'R-A-31105-2'
-  })
-})</script>
-         </div>
-        </div>
-       </div>
-       <p class="note comment-note">Не выкладывайте свой код напрямую в комментариях, он отображается некорректно. Воспользуйтесь сервисом <a href="//cssdeck.com/labs" rel="nofollow">cssdeck.com</a> или <a href="//jsfiddle.net" rel="nofollow">jsfiddle.net</a>, сохраните код и в комментариях дайте на него ссылку. Так и результат сразу увидят.</p>
-       <div id="disqus_thread"></div>
-       <script>
-var disqus_shortname = 'htmlbook';
-(function() {
-	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
+      </div><a href="https://xn----7sbbaqhlkm9ah9aiq.net/contacts-new/" class="lk">Контакты</a>
+      <div class="nav-track">
+       <div class="nta"></div>
       </div>
-      <div id="sidebar">
-       <div class="block" id="block-views-block-popular-faq">
-        <h2 class="block-title">Популярные рецепты</h2>
-        <div class="block-content">
-         <div>
-          <ul>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_img_0.png" width="16" height="16" alt=""><a href="/faq/kak-dobavit-kartinku-na-veb-stranitsu" hreflang="ru">Как добавить картинку на веб-страницу?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_site.png" width="16" height="16" alt=""><a href="/faq/kak-dobavit-ikonku-sayta-v-adresnuyu-stroku-brauzera" hreflang="ru">Как добавить иконку сайта в адресную строку браузера?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_background.png" width="16" height="16" alt=""><a href="/faq/kak-dobavit-fonovyy-risunok-na-veb-stranitsu" hreflang="ru">Как добавить фоновый рисунок на веб-страницу?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_img_3.png" width="16" height="16" alt=""><a href="/faq/kak-sdelat-obtekanie-kartinki-tekstom" hreflang="ru">Как сделать обтекание картинки текстом?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_background.png" width="16" height="16" alt=""><a href="/faq/kak-rastyanut-fon-na-vsyu-shirinu-okna" hreflang="ru">Как растянуть фон на всю ширину окна?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_img_3.png" width="16" height="16" alt=""><a href="/faq/kak-vyrovnyat-fotografiyu-po-tsentru-veb-stranitsy" hreflang="ru">Как выровнять фотографию по центру веб-страницы?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_list.png" width="16" height="16" alt=""><a href="/faq/kak-razmestit-elementy-spiska-gorizontalno" hreflang="ru">Как разместить элементы списка горизонтально?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_link.png" width="16" height="16" alt=""><a href="/faq/kak-ubrat-podcherkivanie-u-ssylok" hreflang="ru">Как убрать подчеркивание у ссылок?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_list_0.png" width="16" height="16" alt=""><a href="/faq/kak-ubrat-markery-v-markirovannom-spiske" hreflang="ru">Как убрать маркеры в маркированном списке?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_text.png" width="16" height="16" alt=""><a href="/faq/kak-izmenit-rasstoyanie-mezhdu-strokami-teksta" hreflang="ru">Как изменить расстояние между строками текста?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_img_4.png" width="16" height="16" alt=""><a href="/faq/kak-sdelat-chtoby-kartinka-menyalas-pri-navedenii-na-nee" hreflang="ru">Как сделать, чтобы картинка менялась при наведении на нее курсора мыши?</a></li>
-           <li class="faq-popular"><img loading="lazy" src="./files/images/faq/faq_link.png" width="16" height="16" alt=""><a href="/faq/kak-otkryt-ssylku-v-novom-okne" hreflang="ru">Как открыть ссылку в новом окне?</a></li>
-          </ul>
-         </div>
-        </div>
-       </div>
-       <div class="block" id="block-views-block-popular-practical">
-        <h2 class="block-title">Популярные задачи</h2>
-        <div class="block-content">
-         <div>
-          <ul>
-           <li class="practical-popular"><a href="/practical/tex" hreflang="ru">TEX</a></li>
-           <li class="practical-popular"><a href="/practical/otstupy-mezhdu-blokov" hreflang="ru">Отступы между блоков</a></li>
-           <li class="practical-popular"><a href="/practical/android-v-teni" hreflang="ru">Андроид в тени</a></li>
-           <li class="practical-popular"><a href="/practical/ssylka-kak-knopka" hreflang="ru">Ссылка как кнопка</a></li>
-           <li class="practical-popular"><a href="/practical/vlozhennye-spiski" hreflang="ru">Вложенные списки</a></li>
-           <li class="practical-popular"><a href="/practical/forma-registratsii" hreflang="ru">Форма регистрации</a></li>
-           <li class="practical-popular"><a href="/practical/obedinenie-yacheek-tablitsy" hreflang="ru">Объединение ячеек таблицы</a></li>
-           <li class="practical-popular"><a href="/practical/obyazatelnye-polya-formy" hreflang="ru">Обязательные поля формы</a></li>
-           <li class="practical-popular"><a href="/practical/tsvet-i-fon-v-tablitse" hreflang="ru">Цвет и фон в таблице</a></li>
-           <li class="practical-popular"><a href="/practical/asuanskaya-plotina" hreflang="ru">Асуанская плотина</a></li>
-           <li class="practical-popular"><a href="/practical/batareyka" hreflang="ru">Батарейка</a></li>
-           <li class="practical-popular"><a href="/practical/zagolovki" hreflang="ru">Заголовки</a></li>
-          </ul>
-         </div>
-        </div>
-       </div>
-       <div class="block" id="block-htmlbook-block-10">
-        <div class="block-content">
-         <div>
-          <div class="adfinity_block_4593"></div>
-         </div>
-        </div>
-       </div>
-      </div>
+     </nav>
+    </nav>
+    <div class="rdnp">
+     <div>
+      <a href="tel:+380966622741">(096) 662-27-41</a>
+     </div>
+     <div>
+      <a href="tel:+380634823200">(063) 482-32-00</a><a rel="nofollow" href="viber://chat?number=%2B380634823200" aria-label="viber"><span class="icon-viber alt-font"></span></a>
      </div>
     </div>
    </div>
-  </div>
-  <footer>
-   <section>
-    <h4>О сайте</h4>
-    <p><a href="/help">Помощь</a></p>
-    <p><a href="/about/copy">Копирование материалов</a></p>
-    <p><a href="/about/error">Борьба с ошибками</a></p>
-    <p><a href="/about/tech">Технологии</a></p>
-    <p><a href="/about/search">Поисковый плагин</a></p>
-   </section>
-   <section>
-    <h4>Основные разделы</h4>
-    <p><a href="/content">Статьи</a></p>
-    <p><a href="/blog">Блог</a></p>
-    <p><a href="/practical">Практикум</a></p>
-    <p><a href="/books">Цифровые книги</a></p>
-    <p><a href="//htmlforum.io" rel="nofollow">Форум</a></p>
-   </section>
-   <section>
-    <h4>HTML</h4>
-    <p><a href="/samhtml">Самоучитель HTML</a></p>
-    <p><a href="/xhtml">XHTML</a></p>
-    <p><a href="/html">Справочник по HTML</a></p>
-    <p><a href="/html5">HTML5</a></p>
-   </section>
-   <section>
-    <h4>CSS</h4>
-    <p><a href="/samcss">Самоучитель CSS</a></p>
-    <p><a href="/css">Справочник по CSS</a></p>
-    <p><a href="/faq">Рецепты CSS</a></p>
-    <p><a href="/css3">CSS3</a></p>
-   </section>
-   <section>
-    <h4>Сайт</h4>
-    <p><a href="/samlayout">Вёрстка</a></p>
-    <p><a href="/layout">Макеты</a></p>
-    <p><a href="/webserver">Веб-сервер</a></p>
-   </section>
-   <section class="hosting">
-    <a href="https://timeweb.com/ru/"><img src="./themes/hb/img/timeweb.svg" width="150"> htmlbook.ru использует хостинг timeweb</a>
-   </section>
-   <p class="li">
-    <script src="./themes/hb/js/li.js"></script></p>
-   <p class="copyright">© 2002–2023 Влад Мержевич, по всем вопросам пишите по адресу vlad@htmlbook.ru</p>
-   <p><a href="http://feeds.feedburner.com/htmlbook" rel="nofollow">Подпишитесь на материалы сайта по RSS</a></p>
+  </header>
+  <main role="main" id="fullpage">
+   <div id="block_2">
+    <!-- [block: block_2] --> <!-- newsnew/ancient --><!--
+[name: Newsnew] 
+-->
+    <div id="feat-area" class="wow fadeIn" data-wow-delay="0.5s">
+     <div class="container">
+      <h1 data-wow-delay="0.8s" data-wow-duration="1s" class="title wow fadeIn constructor-template" data-category-id="55" data-template-type="template-interface" data-template-name="newsnew" data-template-id="1">CSS / HTML</h1><!--
+[name: Breads]
+[type: Info]
+-->
+      <div class="breads">
+       <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" title="Главная" href="https://xn----7sbbaqhlkm9ah9aiq.net/"> <span itemprop="name">Главная</span> </a>
+         <svg class="icon arrow">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite-icon.svg#icon-chevron-down"></use>
+         </svg>
+         <meta itemprop="position" content="1"></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" title="Блог" href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/"> <span itemprop="name">Блог</span> </a>
+         <svg class="icon arrow">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite-icon.svg#icon-chevron-down"></use>
+         </svg>
+         <meta itemprop="position" content="2"></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" title="CSS / HTML" href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html/"> <span itemprop="name">CSS / HTML</span> </a>
+         <svg class="icon arrow">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite-icon.svg#icon-chevron-down"></use>
+         </svg>
+         <meta itemprop="position" content="3"></li>
+       </ul>
+      </div>
+     </div>
+     <nav class="wave-nav bottom left white" role="navigation">
+      <ul id="wave" class="right">
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+     </nav>
+     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="wave-svg">
+      <defs>
+       <filter id="water">
+        <fegaussianblur in="SourceGraphic" stddeviation="7" result="blur" />
+        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9" result="goo" />
+        <fecomposite in="SourceGraphic" in2="goo" operator="atop" />
+       </filter>
+      </defs>
+     </svg>
+    </div>
+    <div class="section bg-white">
+     <div class="container clearfix">
+      <div class="categories-wdg widget">
+       <ul>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/php/"><span class="name">PHP</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html/"><span class="name">CSS / HTML</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/javascript-js/"><span class="name">JavaScript (JS)</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/mysql/"><span class="name">MySQL (базы данных)</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/kalkulyatori/"><span class="name">Калькуляторы</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/prodvigenie-sayta/"><span class="name">Продвижение сайта SEO</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/iternet-marketing/"><span class="name">Интернет маркетинг</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/obuchenie-i-seminari/"><span class="name">Обучение и семинары</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/dizayn-sayta/"><span class="name">Дизайн сайта</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/programmnaya-optimizatsiya-sayta/"><span class="name">Программная оптимизация сайта</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/adaptivnaya-verstka-responsive/"><span class="name">Адаптивная верстка (responsive)</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/jquery/"><span class="name">jQuery</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/nastroyka-hostinga/"><span class="name">Настройка хостинга</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/frontend-frontend/"><span class="name">FrontEnd (ФронтЭнд)</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/js-skripti-na-noviy-god/"><span class="name">Скрипты на Новый год</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/internet-magazin/"><span class="name">Интернет-магазин</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/htaccess/"><span class="name">htaccess</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/ajax/"><span class="name">AJAX</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/iframe/"><span class="name">iFrame</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/json/"><span class="name">JSON</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/svg/"><span class="name">SVG</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/animatsiya/"><span class="name">Анимация</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/data-i-vremya/"><span class="name">Дата и время</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/massivi/"><span class="name">Массивы</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/mikrorazmetka/"><span class="name">Микроразметка</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/menyu/"><span class="name">Меню</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/regulyarnie-virageniya/"><span class="name">Регулярные выражения</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/redirekt/"><span class="name">Редирект</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/tablitsi/"><span class="name">Таблицы</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/cms/"><span class="name">CMS</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/zashchita-i-bezopasnost/"><span class="name">Защита и безопасность</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/formi/"><span class="name">Формы</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/ftp/"><span class="name">FTP</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/xml/"><span class="name">XML</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/curl/"><span class="name">CURL</span></a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/popup/"><span class="name">PopUp</span></a></li>
+       </ul>
+      </div>
+      <form method="get" id="searchform" action="">
+       <div class="categories-wdg widget">
+        <input type="text" id="search" name="search" placeholder="Search..." class="required" value="">
+       </div>
+      </form>
+      <div class="blog-entries constructor-template" data-category-id="55" data-parent_id="2" data-template-type="grid" data-template-name="newsnew">
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/adaptivnyy-video-slayder-na-jquery.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Адаптивный Видео слайдер на jQuery</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/slider-video-jquery-1-medium.jpg" alt="Адаптивный Видео слайдер на jQuery" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/virovnyat-blok-div-po-tsentru-visoti.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Выровнять блок div по центру высоты</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/flex-terms-medium.png" alt="Выровнять блок div по центру высоты" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/spetssimvoli.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Спецсимволы</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/specsymbols-medium.jpg" alt="Спецсимволы" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/sozdanie-veb-vidgeta-dlya-drugih-saytov.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Создание веб виджета для других сайтов JS/PHP</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/widjet-js-medium.jpg" alt="Создание веб виджета для других сайтов JS/PHP" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/prigat-futer-k-nizu-okna-brauzera.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Прижать футер к низу окна браузера</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/header-footer-medium.jpg" alt="Прижать футер к низу окна браузера" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/zatemnenie-kartinki.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Затемнение картинки</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/css-filter-effects-in-action-medium.jpg" alt="Затемнение картинки" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/psevdoklassi-nth-child-i-nth-last-child.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Псевдоклассы nth-child и nth-last-child</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/nth-child-medium.jpg" alt="Псевдоклассы nth-child и nth-last-child" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/pereklyuchatel-chekboks-switch-toggle.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Переключатель чекбокс Switch Toggle</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/switch-toggle-css-medium.jpg" alt="Переключатель чекбокс Switch Toggle" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/ustanovka-sgv-ikonki.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Установка SGV иконки</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/benefits-of-svg-medium.jpg" alt="Установка SGV иконки" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/varianta-fiksatsii-elementa-na-sayte-na-cssjquery.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Варианта фиксации элемента на сайте на CSS/jQuery</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/css-position-all-medium.jpg" alt="Варианта фиксации элемента на сайте на CSS/jQuery" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/plavnoe-peremeshchenie-obekta-html.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Плавное перемещение объекта HTML</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/transition-example2-medium.jpg" alt="Плавное перемещение объекта HTML" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/plavnaya-prokrutka-stranitsi-vverh-na-jquery.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Плавная прокрутка страницы вверх на jQuery</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/scroll-jquery-112-medium.jpg" alt="Плавная прокрутка страницы вверх на jQuery" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/prostoy-adaptivniy-akkordeon-na-cssjs.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Простой адаптивный аккордеон на CSS/JS</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/accordeon-css-js-medium.jpg" alt="Простой адаптивный аккордеон на CSS/JS" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/adaptivnoe-vsplivayushchee-okno-jquery--popup-modal2-okno-na-jquery.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Адаптивное всплывающее окно jQuery | Popup modal2 окно на jQuery</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/modal-window-code-medium.jpg" alt="Адаптивное всплывающее окно jQuery | Popup modal2 окно на jQuery" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/fotogalereya-s-kachayushchimisya-fotoramkami-na-css.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Фотогалерея с качающимися фоторамками на CSS</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/fotoramka-css-medium.jpg" alt="Фотогалерея с качающимися фоторамками на CSS" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/modalnoe-okno-na-zatemnennom-fone.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Модальное окно на затемненном фоне</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/modal-window-js-css-medium.jpg" alt="Модальное окно на затемненном фоне" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/oformlenie-numerovannih-spiskov-ol.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Оформление нумерованных списков ol</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/krasivye-spiski-ol-medium.jpg" alt="Оформление нумерованных списков ol" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/vsplivayushchee-opisanie-dlya-fotografiy.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Всплывающее описание для фотографий</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/1-bcgvldoqbatw0nd-5xyfda-medium.jpg" alt="Всплывающее описание для фотографий" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-animirovannie-oblaka.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>CSS анимированные облака</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/kuchevye-oblaka-medium.jpg" alt="CSS анимированные облака" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-stili-dlya-spiskov-dl-dt-dd.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>CSS-стили для списков dl, dt, dd</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/dl-dt-dd-medium.jpg" alt="CSS-стили для списков dl, dt, dd" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/adaptivnie-video-bloki-youtube.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Адаптивные видео блоки YouTube</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/h2x1-nswitchds-youtube-medium.jpg" alt="Адаптивные видео блоки YouTube" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/stavim-prozrachniy-gradient-na-foto.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Ставим прозрачный градиент на фото</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/gradient-photo-medium.jpg" alt="Ставим прозрачный градиент на фото" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/prokrutka-sodergimogo-tablitsi.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Прокрутка содержимого таблицы</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/187284-medium.jpg" alt="Прокрутка содержимого таблицы" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/izmenenie-razmerov-iframe.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Изменение размеров Iframe</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/iframe-size-medium.jpg" alt="Изменение размеров Iframe" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-izmenenie-razmerov-textarea.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>CSS изменение размеров textarea</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/1509906629-news-pandoge-com-medium.png" alt="CSS изменение размеров textarea" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-ctilizatsiya-checkbox.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>CSS cтилизация Checkbox</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/css-ctilizatsiya-checkbox-medium.jpg" alt="CSS cтилизация Checkbox" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/primeri-css-gradientov.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Примеры CSS градиентов</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/css-gradient-medium.jpg" alt="Примеры CSS градиентов" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/vivod-shtrih-koda-na-sayte.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Вывод штрих-кода на сайте</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/vivod-shtrih-koda-na-sayte-1-medium.jpg" alt="Вывод штрих-кода на сайте" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/fiksatsiya-bloka-pri-prokrutke.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Фиксация блока при прокрутке</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/fiksatsiya-bloka-medium.jpg" alt="Фиксация блока при прокрутке" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/razmeshchenie-teksta-v-tri-kolonki.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Размещение текста в три колонки</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/unnamed-1-medium.jpg" alt="Размещение текста в три колонки" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/oformlenie-knopok-css---skruglennie-knopki-yahoo-google-facebook.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Оформление кнопок CSS</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/buttons-css-medium.jpg" alt="Оформление кнопок CSS" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/pereklyuchateli-radio-button-dlya-blokov-s-foto-i-tekstom.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Переключатели Radio Button для блоков с фото и текстом</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/pereklyuchateli-radio-button-medium.jpg" alt="Переключатели Radio Button для блоков с фото и текстом" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/menyayushchiysya-tsvet-foto-pri-navedenii-kursora.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Меняющийся цвет фото при наведении курсора</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/maxresdefault-2-medium.jpg" alt="Меняющийся цвет фото при наведении курсора" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/dinamicheskiy-pleysholder-placeholder.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Динамический плейсхолдер (placeholder)</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/the-difference-placeholder-medium.jpg" alt="Динамический плейсхолдер (placeholder)" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/posledovatelnaya-smena-foto-na-css.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Последовательная смена фото на CSS</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/bg-3-medium.jpg" alt="Последовательная смена фото на CSS" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/delaem-modalnoe-okno-na-javascript.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Делаем модальное окно на JavaScript</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/modal-window-js-medium.jpg" alt="Делаем модальное окно на JavaScript" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/kak-sdelat-ten-dlya-bloka.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Как сделать тень для блока?</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/box-shadow-medium.jpg" alt="Как сделать тень для блока?" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/delaem-adaptivniy-youtube-pleer.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Делаем адаптивный Youtube плеер</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/iframe-youtube-medium.jpg" alt="Делаем адаптивный Youtube плеер" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/sbros-css-stiley-css-reset.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Сброс CSS стилей (CSS reset)</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/normalize-css-medium.jpeg" alt="Сброс CSS стилей (CSS reset)" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/kak-mogno-dobavlyat-ili-otnimat-shirinu--visotu-v-css.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Как можно добавлять или отнимать ширину / высоту в CSS</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/css-files-medium.jpg" alt="Как можно добавлять или отнимать ширину / высоту в CSS" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/simple-responsive-table-adaptivnaya-tablitsa.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Simple Responsive Table адаптивная таблица</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/resp-table-medium.jpg" alt="Simple Responsive Table адаптивная таблица" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/8-variantov-oformleniya-tsitat-na-css.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>8 вариантов оформления цитат на CSS</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/blockquote-medium.jpg" alt="8 вариантов оформления цитат на CSS" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/videlenie-informatsii-s-pomoshchyu-animatsionnih-blokov.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Выделение информации с помощью анимационных блоков</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/css-rectangle-medium.jpg" alt="Выделение информации с помощью анимационных блоков" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/delaem-oformlenie-liniy-tega-hr-cherez-css.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Делаем оформление линий тега hr через CSS</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/css-line-medium.jpg" alt="Делаем оформление линий тега hr через CSS" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/vertikalniy-spisok-sobitiy-na-css.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Вертикальный список событий на CSS</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/create-timeline-5-medium.jpg" alt="Вертикальный список событий на CSS" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/adaptivnaya-tablitsa-table.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Адаптивная таблица Table Tr Td</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/table-tr-css-medium.jpg" alt="Адаптивная таблица Table Tr Td" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/adaptivnaya-tablitsa-metodom-flexbox.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Адаптивная таблица методом FlexBox</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/flexbox-css-medium.jpg" alt="Адаптивная таблица методом FlexBox" loading="lazy"> </a>
+        </figure>
+       </div>
+       <div class="blog-entry">
+        <figure>
+         <a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/adaptivnaya-verstka-novostniy-ili-stateynih-blokov.html" class="wow fadeIn" data-wow-delay="0.5s">
+          <h3>Адаптивная верстка новостных или статейных блоков</h3><img src="https://xn----7sbbaqhlkm9ah9aiq.net/images/newsnew/newsnew/news-css-medium.jpg" alt="Адаптивная верстка новостных или статейных блоков" loading="lazy"> </a>
+        </figure>
+       </div>
+      </div><!-- newsnew/pagination -->
+      <div class="pagination-container">
+       <ul aria-label="Pagination" class="pagination" role="navigation">
+        <li class="current"><span>1</span></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html/?page=2">2</a></li>
+        <li class="pagination-next"><a href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html/?page=2" rel="next" data-next="?page=2">Следующая</a></li>
+       </ul>
+      </div>
+     </div>
+    </div><!-- micromarking/ancient --><!--
+[name: Micromarking]
+[type: SEO] 
+[mtype: WebSite,Organization,BreadcrumbList]
+-->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://xn----7sbbaqhlkm9ah9aiq.net/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+</script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html/",
+        "logo": "https://xn----7sbbaqhlkm9ah9aiq.net/images/logo-dark.png"
+        		, "contactPoint": [
+					                        {
+                            "@type": "ContactPoint",
+                            "telephone": "+38 096 662 27 41",
+                            "contactType": "customer service"
+                        }
+						,
+					                        {
+                            "@type": "ContactPoint",
+                            "telephone": "+38 063 482 32 00",
+                            "contactType": "customer service"
+                        }
+																
+                    ]
+				        , "sameAs": ["https://www.youtube.com/channel/UC0FiM_oGRSdx0YO8Mlr3iUg"]
+		    }
+</script>
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+															{
+			"@type": "ListItem",
+			"position": 1,
+			"item":
+				{
+					"@id": "https://xn----7sbbaqhlkm9ah9aiq.net/",
+					"name": "Cоздание сайта"
+				}
+			} 
+						,
+												{
+			"@type": "ListItem",
+			"position": 2,
+			"item":
+				{
+					"@id": "https://xn----7sbbaqhlkm9ah9aiq.net/news-new/",
+					"name": "Блог"
+				}
+			} 
+						,
+												{
+			"@type": "ListItem",
+			"position": 3,
+			"item":
+				{
+					"@id": "https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html/",
+					"name": "CSS / HTML"
+				}
+			}  
+														]
+    }
+</script><!-- optimization/ancient --><!-- [name: Мета данные] [type: SEO оптимизация] -->
+    <div class="container clearfix metadata constructor-template" data-category-id="55" data-template-type="form" data-template-name="optimization">
+     <div class="text-optimization padding-45">
+      <p><span style="font-weight: bold;">HTML и CSS</span> - это два основных языка, которые используются в веб-разработке для создания и оформления веб-страниц. Оба языка были разработаны в 1990-х годах и с тех пор прошли долгий путь развития.</p>
+      <p><span style="font-weight: bold;">HTML (HyperText Markup Language)</span> - это язык разметки, который используется для создания содержимого веб-страниц. HTML5, последняя версия языка, была выпущена в 2014 году. С тех пор HTML5 стал стандартом веб-разработки и получил ряд новых возможностей. Одна из самых значимых новых возможностей HTML5 - это поддержка мультимедиа, включая видео и аудио.</p>
+      <p><span style="font-weight: bold;">CSS (Cascading Style Sheets)</span> - это язык стилей, который используется для оформления веб-страниц. CSS позволяет разработчикам создавать красивые и функциональные веб-страницы, определяя внешний вид и оформление элементов на странице. CSS также развивается и в настоящее время активно используется в современной веб-разработке. В последнее время появилось много новых возможностей, таких как гибкие и адаптивные дизайны, анимации и многое другое.</p>
+      <blockquote>
+       <p style="text-align: center;">Одной из основных причин быстрого развития HTML и CSS является тенденция к упрощению веб-разработки.</p>
+      </blockquote>
+      <p>Современные веб-разработчики хотят быстро создавать и опубликовывать веб-сайты, не вдаваясь в детали программирования. И HTML, и CSS предлагают простой и интуитивно понятный способ создания и оформления веб-страниц.</p>
+      <p>Также следует отметить, что HTML и CSS сегодня используются не только для создания веб-страниц, но и <span style="font-weight: bold;">для разработки мобильных приложений</span>.</p>
+      <p>Такие платформы, как Apache Cordova, позволяют использовать HTML и CSS для создания многоплатформенных мобильных приложений.&nbsp;Эти языки являются неотъемлемой частью современной <a href="https://создание-сайта.net/sozdanie-saytov-ukraine/kiev/">веб-разработки сайтов</a> и продолжат развиваться в ближайшем будущем.</p>
+     </div>
+    </div>
+   </div>
+  </main>
+  <footer role="contentinfo" id="footer">
+   <div id="block_3">
+    <!-- [block: block_3] --> <!-- footernew/ancient --><!--
+[name: footernew]
+-->
+    <div class="container clearfix">
+     <div class="info" itemscope itemtype="https://schema.org/Organization">
+      <div class="col-1_3" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+       <img itemprop="image" class="aligncenter img-responsive" loading="lazy" src="./images/icon-Footer-Address.png" width="48" height="48" alt="Адрес">
+       <div class="title" itemprop="name">
+        Адрес
+       </div>
+       <div itemprop="streetAddress" class="constructor-template" data-category-id="55" data-template-type="template-interface" data-template-name="footernew" data-template-id="1">
+        Украина 03138, Киев, проспект Валерия Лобановского 99/1
+       </div>
+      </div>
+      <div class="col-1_3">
+       <img itemprop="image" class="aligncenter img-responsive" src="./images/icon-Footer-Phone.png" loading="lazy" width="48" height="48" alt="Телефон">
+       <div class="title" itemprop="name">
+        Телефон
+       </div><span itemprop="telephone" class="alt-font constructor-template" data-category-id="55" data-template-type="template-interface" data-template-name="footernew" data-template-id="2"> <a href="tel:+380966622741">(096) 662-27-41</a><br><a href="tel:+380634823200">(063) 482-32-00</a> </span>
+      </div>
+      <div class="col-1_3">
+       <img class="aligncenter img-responsive" src="./images/icon-Footer-Email.png" loading="lazy" width="48" height="48" alt="E-mail">
+       <div class="title">
+        Email
+       </div><a href="mailto:info@abcname.net" itemprop="email">info@abcname.net</a>
+      </div>
+     </div>
+     <ul class="breadcrumbs" xmlns="https://www.w3.org/1999/xhtml" xmlns:v="https://rdf.data-vocabulary.org/#">
+      <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" title="Разработка сайта" href="https://xn----7sbbaqhlkm9ah9aiq.net/"> <span class="current" itemprop="name">Разработка сайта</span> </a>
+       <meta itemprop="position" content="1"></li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" title="Блог" href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/"> <span itemprop="name">Блог</span> </a>
+       <meta itemprop="position" content="2"></li>
+      <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" title="CSS / HTML" href="https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html/"> <span class="current" itemprop="name">CSS / HTML</span> </a>
+       <meta itemprop="position" content="3"></li>
+     </ul>
+     <div class="minfo constructor-template" data-category-id="55" data-template-type="template-interface" data-template-name="footernew" data-template-id="1">
+      <div class="col-1_3">
+       <div class="title">
+        Разработка сайтов
+       </div>
+       <ul>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/sozdanie-internet-magazinov-ukraine/kiev/">Разработка Интернет-магазина</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-korporativnogo-sayta/">Создание корпоративного сайта</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-sayta-kataloga/">Создание сайта каталога</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-sayta-vizitki/">Создание сайта визитки</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sazdanie-landing-page/">Создание Landing page</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/razrabotka-internet-proektov/sozdanie-eksklyuzivnogo-proekta/">Создание эксклюзивного проекта</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/sozdanie-saytov-ukraine/">Изготовление сайтов в регионах</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/sozdanie-internet-magazinov-ukraine/">Разработка магазинов в регионах</a></li>
+       </ul>
+      </div>
+      <div class="col-1_3">
+       <div class="title">
+        Услуги
+       </div>
+       <ul>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/sozdanie-saytov-ukraine/kiev/">Создание сайтов</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/services-new/kompyuternaya-grafika.html">Веб дизайн</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/services-new/programms-module/">Программные модули</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/services-new/tehnicheskaya-poddergka.html">Техническая поддержка сайта</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/services-new/prodvigenie-sayta/">Продвижение сайта</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/services-new/kontent-poddergka.html">Написание контента</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/services-new/internet-marketing/">Реклама сайта в Интернете</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/services-new/kontekstnaya-reklama/">Контекстная реклама</a></li>
+       </ul>
+      </div>
+      <div class="col-1_3">
+       <div class="title">
+        Информация
+       </div>
+       <ul>
+        <li><a href="/news-new/">Блоги, статьи, новости</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/faq/">Вопросы</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/instructions-cmsdk/">Инструкции</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/otzyvy/">Отзывы</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/info/nasha-komanda/">Наша команда</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/portfolio-new/">Портфолио</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/zakazat-sayt/">Заказать сайт</a></li>
+        <li><a href="https://xn----7sbbaqhlkm9ah9aiq.net/contacts-new/">Контакты</a></li>
+       </ul>
+      </div>
+     </div>
+     <div class="social-media constructor-template" data-category-id="55" data-template-type="template-interface" data-template-name="footernew" data-template-id="1">
+      <a href="viber://chat?number=%2B380634823200" title="viber"><img src="./images/viber.svg" width="42" height="42" loading="lazy" alt="viber"></a> <a href="https://telegram.me/ABCnameAndrey" title="telegram"><img src="./images/tele.svg" width="42" height="42" loading="lazy" alt="tele"></a> <a href="https://wa.me/380634823200?text=Здравствуйте.%20Вопрос%20по%20поводу%20сайта." title="whatsapp"><img src="./images/whatsapp.svg" width="40" height="40" loading="lazy" alt="wapp"></a>
+     </div>
+     <div class="langs">
+      <span class="active"><a href="/news-new/css-html/">Русский</a></span> <span class=""><a href="/ua/news-new/css-html/">Українська</a></span>
+     </div><small id="copyright">© <span class="alt-font">2007-2023</span> Продвижение сайта, раскрутка – ABCname</small>
+    </div><span class="slide-up-icon" id="back_to_top">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" style="fill: #0294ca;">
+      <path d="M23.856 11.76l-11.508-11.616c-0.087-0.088-0.208-0.143-0.342-0.143s-0.255 0.055-0.342 0.143l-11.52 11.616c-0.088 0.088-0.142 0.208-0.142 0.342 0 0.267 0.217 0.484 0.484 0.484 0.134 0 0.254-0.054 0.342-0.142l10.692-10.8v21.744c0 0.265 0.215 0.48 0.48 0.48s0.48-0.215 0.48-0.48v-21.732l10.692 10.8c0.088 0.088 0.208 0.142 0.342 0.142 0.267 0 0.484-0.217 0.484-0.484 0-0.134-0.054-0.254-0.142-0.342z"></path>
+     </svg></span><!-- [name: Счетчики] [type: SEO оптимизация]-->
+    <div style="display: none;">
+     <!-- hit.ua --> <a href="https://hit.ua/?x=52141" target="_blank">
+      <script language="javascript" type="text/javascript"><!--
+Cd=document;Cr="&"+Math.random();Cp="&s=1";
+Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
+Cp+="&t="+(new Date()).getTimezoneOffset();
+if(self!=top)Cp+="&f=1";
+//--></script>
+      <script language="javascript1.1" type="text/javascript"><!--
+if(navigator.javaEnabled())Cp+="&j=1";
+//--></script>
+      <script language="javascript1.2" type="text/javascript"><!--
+if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
+screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+//--></script>
+      <script language="javascript" type="text/javascript"><!--
+Cd.write("<img src='//c.hit.ua/hit?i=52141&g=0&x=4"+Cp+Cr+
+"&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+
+"' border='0' width='88' height='15' "+
+"alt='hit.ua: посетителей за сегодня' title='hit.ua: посетителей за сегодня'/>");
+//--></script>
+      <noscript>
+       <img src=".//c.hit.ua/hit?i=52141&amp;g=0&amp;x=4" border="0" width="88" height="15" alt="hit.ua: посетителей за сегодня" title="hit.ua: посетителей за сегодня">
+      </noscript></a> <!-- / hit.ua -->
+    </div>
+   </div>
   </footer>
-  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/9","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"ru"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"statistics":{"data":{"nid":"9"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"ab8c70fba0340cdf0f780210147b7b0208b1737c62537ff5cafe47aa595dc7f6"}}</script>
-  <script src="./files/js/js_8QOHiYR2jCL6ldpjlWyzVqRiMmYOat4xJroV85AgrZQ.js"></script>
-  <script src="./themes/hb/js/ads.js"></script>
+  <noscript id="deferred-styles">
+   <link rel="stylesheet" href="./upload/csstmp/205045.css">
+  </noscript>
+  <script>
+var loadDeferredStyles=function(){var e=document.getElementById("deferred-styles"),t=document.createElement("div");t.innerHTML=e.textContent,document.body.appendChild(t),e.parentElement.removeChild(e)},raf=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;raf?raf(function(){window.setTimeout(loadDeferredStyles,0)}):window.addEventListener("load",loadDeferredStyles),document.addEventListener("DOMContentLoaded",function(){var e=[].slice.call(document.querySelectorAll("img.lazy"));if("IntersectionObserver"in window){let t=new IntersectionObserver(function(e,n){e.forEach(function(e){if(e.isIntersecting){let n=e.target;n.src=n.dataset.src,n.classList.remove("lazy"),t.unobserve(n)}})});e.forEach(function(e){t.observe(e)})}});
+</script><!--[if IE]> <script src="/js/html5.js"></script> <link rel="stylesheet" media="all" href="/css/ie_min.css"><![endif]--><!--[if IE 9]> <link rel="stylesheet" media="all" href="/css/ie9_min.css"><![endif]--><!-- css3-mediaqueries.js for IE less than 9 --><!--[if lt IE 9]><script src="/js/css3-mediaqueries.js"></script><![endif]-->
+  <script async defer src="./js/scripts.js"></script>
+  <script src="./js/jquery-1.7.2.min.js"></script>
+  <script>
+	$('#search').keypress(function (e) {
+	  if (e.which == 13) {
+		$('#searchform').submit();
+		return false;
+	  }
+	});		
+</script>
  </body>
 </html>

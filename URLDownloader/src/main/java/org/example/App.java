@@ -1,5 +1,9 @@
 package org.example;
 
+import org.apache.commons.io.FileUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import java.io.*;
 import java.net.*;
 import java.nio.file.Files;
@@ -7,7 +11,7 @@ import java.nio.file.Paths;
 
 public class App  {
 
-    private static String LINK = "https://htmlbook.ru/samhtml/struktura-html-koda";
+    private static String LINK = "https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html";
     private static String WEBPAGE_TYPE = ".html";
 
     public static void main(String[] args) throws IOException {
@@ -40,12 +44,12 @@ public class App  {
 
     private static void PageDownloader(String FileName) throws IOException {
 
-        if(WEBPAGE_TYPE.equals(".html")) {
+        if(WEBPAGE_TYPE.equals(".html") || WEBPAGE_TYPE.equals(".org")) {
 
             try {
-                PageParser parser = new PageParser(new URI(LINK));
+                PageParser parser = new PageParser(LINK);
             } catch (Exception exception) {
-                System.out.println(exception.getMessage());
+                System.out.println(exception.getMessage() + "\nIN FILE: APP; STR: 52");
             }
         }
 
