@@ -19,6 +19,7 @@ import java.util.List;
 public class PageParser {
 
     private String link;
+    private String SAVE_PATH;
     private static Document document;
     private StringBuilder HTMLBuilder;
     private List<LinkFile> Resources;
@@ -26,9 +27,10 @@ public class PageParser {
     public PageParser() {
         this.Resources = new ArrayList<>();
     }
-    public PageParser(String link) throws IOException {
+    public PageParser(String link, String SAVE_PATH) throws IOException {
 
         this.link = link;
+        this.SAVE_PATH = SAVE_PATH;
         this.document = Jsoup.connect(link).get();
         this.HTMLBuilder = new StringBuilder(document.html());
         this.Resources = new ArrayList<>();
@@ -54,8 +56,8 @@ public class PageParser {
         try {
 
             String HTMLBuffer = document.html();
-            new File("./webparse").mkdirs();
-            FileWriter writer = new FileWriter("./webparse/main.html", true);
+            new File(SAVE_PATH + "webparse").mkdirs();
+            FileWriter writer = new FileWriter(SAVE_PATH + "webparse/main.html", true);
             writer.write(HTMLBuffer);
             writer.close();
         } catch (IOException e) {
@@ -161,10 +163,10 @@ public class PageParser {
      */
     private void Save(LinkFile linkFile) throws IOException {
 
-        new File("./webparse" + linkFile.getPath()).mkdirs();
+        new File(SAVE_PATH + "webparse" + linkFile.getPath()).mkdirs();
         URL url = new URL(linkFile.getLink());
         URLConnection connection = url.openConnection();
         InputStream stream = url.openStream();
-        Files.copy(stream, Paths.get("./webparse" + linkFile.getPath() + linkFile.getName()));
+        Files.copy(stream, Paths.get(SAVE_PATH + "webparse" + linkFile.getPath() + linkFile.getName()));
     }
 }

@@ -4,11 +4,14 @@ import java.awt.*;
 import java.io.*;
 import java.net.*;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class Main {
 
-    private static String LINK = "https://habr.com/ru/articles/";
+    private static String LINK = "https://freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/";
+    private static String SAVE_PATH = "./src/";
     private static String WEBPAGE_TYPE = ".html";
     private static String[] WEBPAGE_ACCESS = {".html", ".com", ".ru", ".org"};
 
@@ -18,6 +21,8 @@ public class Main {
         WEBPAGE_TYPE = GetWebPageType(LINK);
         PageDownloader("page");
         OpenMainHTML();
+
+
     }
 
     /**
@@ -91,7 +96,7 @@ public class Main {
     private static void OpenMainHTML() throws IOException {
 
         Desktop desktop = Desktop.getDesktop();
-        desktop.open(new File("./webparse/main.html"));
+        desktop.open(new File(SAVE_PATH + "webparse/main.html"));
     }
 
     /**
@@ -114,7 +119,7 @@ public class Main {
         if(CheckDomain()) {
 
             try {
-                PageParser parser = new PageParser(LINK);
+                PageParser parser = new PageParser(LINK, SAVE_PATH);
             } catch (Exception exception) {
                 System.out.println(exception.getMessage() + "\nIN FILE: Main.java; IN STR: 68");
             }
