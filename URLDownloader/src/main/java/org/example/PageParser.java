@@ -37,13 +37,12 @@ public class PageParser {
         ParseBlock("script");
         ParseBlock("link");
 
-        for(int i = 0; i < Resources.size(); i++) {
+        for(int IndexResource = 0; IndexResource < Resources.size(); IndexResource++) {
 
             try {
-
-                save(Resources.get(i));
+                save(Resources.get(IndexResource));
             } catch (Exception e) {
-                System.out.println(e.getMessage());
+                System.out.println(e.getMessage() + "\nIN FILE: PageParser.java; IN STR: 45");
             }
         }
 
@@ -52,17 +51,15 @@ public class PageParser {
         ReplacePath("link", "href");
         ReplacePath("script", "src");
 
-        String s = document.html();
-
         try {
+
+            String HTMLBuffer = document.html();
             new File("./webparse").mkdirs();
             FileWriter writer = new FileWriter("./webparse/main.html", true);
-
-            writer.write(s);
+            writer.write(HTMLBuffer);
             writer.close();
-
         } catch (IOException e) {
-            System.out.println(e.getMessage() + " IN CLASS: PageParser.java; IN STR: 65");
+            System.out.println(e.getMessage() + " \nIN FILE: PageParser.java; IN STR: 68");
         }
     }
 
@@ -90,10 +87,12 @@ public class PageParser {
 
         String LinkPath = element.attr(AttrName);
         int LinkPathLastIndex = LinkPath.lastIndexOf('/');
-        if(LinkPath.length() != 0 && LinkPath.substring(0, LinkPathLastIndex).indexOf('.') == -1
-                                  && LinkPath.substring(LinkPathLastIndex).indexOf('.')    != -1)
-            Resources.add(new LinkFile(element.absUrl(AttrName), LinkPath.substring(0, LinkPathLastIndex),
-                                                                 LinkPath.substring(LinkPathLastIndex)));
+        if(LinkPath.length() != 0) {
+
+            if(LinkPath.substring(0, 5).equals("https") != true)
+                Resources.add(new LinkFile(element.absUrl(AttrName), LinkPath.substring(0, LinkPathLastIndex),
+                        LinkPath.substring(LinkPathLastIndex)));
+        }
     }
 
     private void ReplacePath(String TagName, String SelectName) {
@@ -101,8 +100,20 @@ public class PageParser {
         for(Element TagElement : document.select(TagName + "[" + SelectName + "]")) {
 
             String tag = TagElement.attr(SelectName);
-            if(tag.substring(0, tag.indexOf('/')).equals("https:") == false)
+
+            if(tag.substring(0, 2).equals("//"))
+                TagElement.attr(SelectName, "." + TagElement.attr(SelectName).substring(1));
+
+            else if(tag.substring(0, tag.indexOf('/')).equals("https:") == false) {
+
+                if(tag.charAt(0) != '/') {
+
+                    TagElement.attr(SelectName, "./" + TagElement.attr(SelectName));
+                    continue;
+                }
+
                 TagElement.attr(SelectName, "." + TagElement.attr(SelectName));
+            }
         }
     }
 

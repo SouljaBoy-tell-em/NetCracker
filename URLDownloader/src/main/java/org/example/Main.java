@@ -1,24 +1,31 @@
 package org.example;
 
-import org.apache.commons.io.FileUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
+import java.awt.*;
 import java.io.*;
 import java.net.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class App  {
+public class Main {
 
-    private static String LINK = "https://xn----7sbbaqhlkm9ah9aiq.net/news-new/css-html";
+    private static String LINK = "https://blog.hubspot.com/marketing/web-design-html-css-javascript";
     private static String WEBPAGE_TYPE = ".html";
+    private static String[] WEBPAGE_ACCESS = {".html", ".com", ".ru", ".org"};
 
     public static void main(String[] args) throws IOException {
 
         ConvertLink();
         WEBPAGE_TYPE = GetWebPageType(LINK);
         PageDownloader("page");
+        OpenMainHTML();
+    }
+
+    private static boolean CheckDomain() {
+
+        for(int DomenIndex = 0; DomenIndex < WEBPAGE_ACCESS.length; DomenIndex++)
+            if(WEBPAGE_ACCESS[DomenIndex].equals(WEBPAGE_TYPE))
+                return true;
+        return false;
     }
 
     private static void ConvertLink() {
@@ -42,14 +49,21 @@ public class App  {
         return FileName.substring(FileName.lastIndexOf('.'));
     }
 
+    private static void OpenMainHTML() throws IOException {
+
+        Desktop desktop = Desktop.getDesktop();
+        desktop.open(new File("./webparse/main.html"));
+    }
+
     private static void PageDownloader(String FileName) throws IOException {
 
-        if(WEBPAGE_TYPE.equals(".html") || WEBPAGE_TYPE.equals(".org")) {
+
+        if(CheckDomain()) {
 
             try {
                 PageParser parser = new PageParser(LINK);
             } catch (Exception exception) {
-                System.out.println(exception.getMessage() + "\nIN FILE: APP; STR: 52");
+                System.out.println(exception.getMessage() + "\nIN FILE: Main.java; IN STR: 68");
             }
         }
 
