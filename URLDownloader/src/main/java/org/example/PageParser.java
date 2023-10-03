@@ -40,7 +40,7 @@ public class PageParser {
         for(int IndexResource = 0; IndexResource < Resources.size(); IndexResource++) {
 
             try {
-                save(Resources.get(IndexResource));
+                Save(Resources.get(IndexResource));
             } catch (Exception e) {
                 System.out.println(e.getMessage() + "\nIN FILE: PageParser.java; IN STR: 45");
             }
@@ -63,6 +63,17 @@ public class PageParser {
         }
     }
 
+    /**
+     * The ParseBlock(String) function works depending on <br>
+     * the ParseTag tag and passes the attribute of this tag <br>
+     * to the ParseFile(String, Element) function for subsequent <br>
+     * downloading of the file from the link. <br><br>
+     * Params:
+     * <ul>
+     * <li>ParseTag - tag of html file</li>
+     * </ul>
+     * return meaning: void
+     */
     private void ParseBlock(String ParseTag) {
 
         for(Element element : document.getElementsByTag(ParseTag)) {
@@ -83,6 +94,16 @@ public class PageParser {
         }
     }
 
+    /**
+     * The ParseFile(Element, String) adds the link to the file in the resources<br>
+     * list, which will be parsed later.<br><br>
+     * Params:
+     * <ul>
+     * <li>element - element from the ParseBlock(String)</li>
+     * <li>AttrName - name of attribute</li>
+     * </ul>
+     * return meaning: void
+     */
     private void ParseFile(Element element, String AttrName) {
 
         String LinkPath = element.attr(AttrName);
@@ -95,29 +116,50 @@ public class PageParser {
         }
     }
 
-    private void ReplacePath(String TagName, String SelectName) {
+    /**
+     * The ReplacePath(String, String) replaces the path in the HTML file with <br>
+     * a resource that has been downloaded to a local folder with <br>
+     * a folder structure. <br><br>
+     * Params:
+     * <ul>
+     * <li>TagName - tag of html file</li>
+     * <li>AttrName - name of attribute</li>
+     * </ul>
+     * return meaning: void
+     */
+    private void ReplacePath(String TagName, String AttrName) {
 
-        for(Element TagElement : document.select(TagName + "[" + SelectName + "]")) {
+        for(Element TagElement : document.select(TagName + "[" + AttrName + "]")) {
 
-            String tag = TagElement.attr(SelectName);
+            String tag = TagElement.attr(AttrName);
 
             if(tag.substring(0, 2).equals("//"))
-                TagElement.attr(SelectName, "." + TagElement.attr(SelectName).substring(1));
+                TagElement.attr(AttrName, "." + TagElement.attr(AttrName).substring(1));
 
             else if(tag.substring(0, tag.indexOf('/')).equals("https:") == false) {
 
                 if(tag.charAt(0) != '/') {
 
-                    TagElement.attr(SelectName, "./" + TagElement.attr(SelectName));
+                    TagElement.attr(AttrName, "./" + TagElement.attr(AttrName));
                     continue;
                 }
 
-                TagElement.attr(SelectName, "." + TagElement.attr(SelectName));
+                TagElement.attr(AttrName, "." + TagElement.attr(AttrName));
             }
         }
     }
 
-    private void save(LinkFile linkFile) throws IOException {
+    /**
+     * The Save(LinkFile) saves a file from a link and places <br>
+     * it into a specific folder structure. <br><br>
+     * Params:
+     * <ul>
+     * <li>linkFile - object, that contains information <br>
+     * about parsing file</li>
+     * </ul>
+     * return meaning: void
+     */
+    private void Save(LinkFile linkFile) throws IOException {
 
         new File("./webparse" + linkFile.getPath()).mkdirs();
         URL url = new URL(linkFile.getLink());
