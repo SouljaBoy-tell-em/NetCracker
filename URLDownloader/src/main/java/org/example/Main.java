@@ -17,12 +17,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
+        Initialize(args);
         ConvertLink();
         WEBPAGE_TYPE = GetWebPageType(LINK);
         PageDownloader("page");
         OpenMainHTML();
-
-
     }
 
     /**
@@ -79,13 +78,25 @@ public class Main {
      * </ul>
      * return meaning: type of web page
      */
-    public static String GetWebPageType(String Link) {
+    private static String GetWebPageType(String Link) {
 
         String WebPageType = Link.substring(Link.lastIndexOf('.'));
         if(WebPageType.indexOf('/') != -1)
             return ".html";
 
         return Link.substring(Link.lastIndexOf('.'));
+    }
+
+    private static void Initialize(String[] args) {
+
+        try {
+
+            LINK = args[0];
+            SAVE_PATH = args[1];
+        } catch (Exception exception) {
+            System.out.println("ARGS IS NULL; ERROR IN Main.java; IN STR: 96");
+            System.exit(1);
+        }
     }
 
     /**
