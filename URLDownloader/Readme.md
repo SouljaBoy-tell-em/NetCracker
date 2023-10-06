@@ -5,7 +5,7 @@ This program allows you to parse a web page or a file by its link.
 ## English documentation:
 
 ### BUILDING:
-The project is built on the Maven archetype (pom.xml). The Jsoup dependency is used for convenient file parsing. Dependencies such as junit, batik-css, commons-validator, and joda-time are also used.
+The project is built on the Maven archetype (pom.xml). The Jsoup dependency is used for convenient file parsing. Dependencies such as junit, batik-css, commons-validator, joda-time and commons-io are also used.
 
 ```sh
     <dependency>
@@ -33,6 +33,11 @@ The project is built on the Maven archetype (pom.xml). The Jsoup dependency is u
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
       <version>2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.14.0</version>
     </dependency>
 ```
 
@@ -99,7 +104,7 @@ The project will start compiling and the web page or file will be parsed into th
 
 ### СБОРКА:
 Проект построен на архетипе Maven(pom.xml). Для удобства парсинга файлов использована зависимость Jsoup. 
-Также использованы зависимости: junit, batik-css, commons-validator, joda-time.
+Также использованы зависимости: junit, batik-css, commons-validator, joda-time и commons-io.
 
 ```sh
     <dependency>
@@ -127,6 +132,11 @@ The project will start compiling and the web page or file will be parsed into th
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
       <version>2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.14.0</version>
     </dependency>
 ```
 

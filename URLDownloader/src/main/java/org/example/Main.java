@@ -1,5 +1,7 @@
 package org.example;
 
+import org.apache.commons.io.FileUtils;
+
 import java.awt.*;
 import java.io.*;
 import java.net.*;
@@ -7,15 +9,17 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.Comparator;
+import java.util.Scanner;
 
 public class Main {
 
     private static String LINK = "https://freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/";
-    private static String SAVE_PATH = "./src/";
+    private static String SAVE_PATH = "./src";
     private static String WEBPAGE_TYPE = ".html";
     private static String[] WEBPAGE_ACCESS = {".html", ".com", ".ru", ".org"};
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, URISyntaxException {
 
         Initialize(args);
         ConvertLink();
@@ -69,6 +73,23 @@ public class Main {
         }
     }
 
+
+    /**
+     * The DeleteDirectory() deletes the directory with path, that you printed<br>
+     * in command line. If you press 'y' and terminates the program if you<br>
+     * do not press 'y'. <br>
+     * return meaning: void
+     */
+    private static void DeleteDirectory() throws IOException {
+
+        Scanner AnswerScanner = new Scanner(System.in);
+        String answer = AnswerScanner.nextLine();
+        if(!(answer.toLowerCase().equals("y") ||
+                answer.toLowerCase().equals("yes")))
+            System.exit(0);
+        FileUtils.deleteDirectory(new File(SAVE_PATH + "/webparse"));
+    }
+
     /**
      * The GetWebPageType(String) gets domain address.
      * <br>
@@ -87,15 +108,33 @@ public class Main {
         return Link.substring(Link.lastIndexOf('.'));
     }
 
-    private static void Initialize(String[] args) {
+    /**
+     * The Initialize(String[]) initializes LINK and SAVE_PATH from the command line.<br>
+     * You enter the values for the link and save path yourself. If a folder already<br>
+     * exists at this path, you will be prompted to replace it.<br>
+     * Params:
+     * <ul>
+     * <li>args - args from command line</li>
+     * </ul>
+     * return meaning: void
+     */
+    private static void Initialize(String[] args) throws IOException {
 
         try {
 
             LINK = args[0];
-            SAVE_PATH = args[1];
+            SAVE_PATH = args[1] + "/";
+
         } catch (Exception exception) {
             System.out.println("ARGS IS NULL; ERROR IN Main.java; IN STR: 96");
             System.exit(1);
+        }
+
+        if((new File(SAVE_PATH + "/webparse")).exists()) {
+
+            System.out.println("So directory already exists");
+            System.out.println("Do you want to change directory ?(y/n)");
+            DeleteDirectory();
         }
     }
 
@@ -107,7 +146,7 @@ public class Main {
     private static void OpenMainHTML() throws IOException {
 
         Desktop desktop = Desktop.getDesktop();
-        desktop.open(new File(SAVE_PATH + "webparse/main.html"));
+        desktop.open(new File(SAVE_PATH + "/webparse/main.html"));
     }
 
     /**

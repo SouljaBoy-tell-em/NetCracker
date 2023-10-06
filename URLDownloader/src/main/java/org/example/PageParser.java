@@ -56,8 +56,8 @@ public class PageParser {
         try {
 
             String HTMLBuffer = document.html();
-            new File(SAVE_PATH + "webparse").mkdirs();
-            FileWriter writer = new FileWriter(SAVE_PATH + "webparse/main.html", true);
+            new File(SAVE_PATH + "/webparse").mkdirs();
+            FileWriter writer = new FileWriter(SAVE_PATH + "/webparse/main.html", true);
             writer.write(HTMLBuffer);
             writer.close();
         } catch (IOException e) {
@@ -113,8 +113,9 @@ public class PageParser {
         if(LinkPath.length() != 0) {
 
             if(LinkPath.substring(0, 5).equals("https") != true)
-                Resources.add(new LinkFile(element.absUrl(AttrName), LinkPath.substring(0, LinkPathLastIndex),
-                        LinkPath.substring(LinkPathLastIndex)));
+                Resources.add(new LinkFile(element.absUrl(AttrName),
+                              LinkPath.substring(0, LinkPathLastIndex),
+                              LinkPath.substring(LinkPathLastIndex)));
         }
     }
 
@@ -134,7 +135,6 @@ public class PageParser {
         for(Element TagElement : document.select(TagName + "[" + AttrName + "]")) {
 
             String tag = TagElement.attr(AttrName);
-
             if(tag.substring(0, 2).equals("//"))
                 TagElement.attr(AttrName, "." + TagElement.attr(AttrName).substring(1));
 
@@ -145,7 +145,6 @@ public class PageParser {
                     TagElement.attr(AttrName, "./" + TagElement.attr(AttrName));
                     continue;
                 }
-
                 TagElement.attr(AttrName, "." + TagElement.attr(AttrName));
             }
         }
@@ -163,10 +162,10 @@ public class PageParser {
      */
     private void Save(LinkFile linkFile) throws IOException {
 
-        new File(SAVE_PATH + "webparse" + linkFile.getPath()).mkdirs();
+        new File(SAVE_PATH + "/webparse" + linkFile.getPath()).mkdirs();
         URL url = new URL(linkFile.getLink());
         URLConnection connection = url.openConnection();
         InputStream stream = url.openStream();
-        Files.copy(stream, Paths.get(SAVE_PATH + "webparse" + linkFile.getPath() + linkFile.getName()));
+        Files.copy(stream, Paths.get(SAVE_PATH + "/webparse" + linkFile.getPath() + linkFile.getName()));
     }
 }
