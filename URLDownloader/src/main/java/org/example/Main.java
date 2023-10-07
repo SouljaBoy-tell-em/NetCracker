@@ -14,15 +14,15 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static String LINK = "https://freecodecamp.org/news/how-to-make-a-landing-page-with-html-css-and-javascript/";
+    private static String LINK = "https://mipt.ru";
     private static String SAVE_PATH = "./src";
     private static String WEBPAGE_TYPE = ".html";
-    private static String[] WEBPAGE_ACCESS = {".html", ".com", ".ru", ".org"};
+    private static String[] WEBPAGE_ACCESS = {".html", ".com", ".ru", ".org", ".xhtml"};
 
     public static void main(String[] args) throws IOException, URISyntaxException {
 
         Initialize(args);
-        ConvertLink();
+        LINK = ConvertLink(LINK);
         WEBPAGE_TYPE = GetWebPageType(LINK);
         PageDownloader("page");
         OpenMainHTML();
@@ -61,18 +61,18 @@ public class Main {
      * is cut off. <br><br>
      * return meaning: void
      */
-    private static void ConvertLink() {
+    public static String ConvertLink(String Link) {
 
-        byte[] ByteLink = LINK.getBytes();
-        LINK = "";
-        for(int ByteLinkIndex = 0; ByteLinkIndex < ByteLink.length; ByteLinkIndex++) {
-
+        byte[] ByteLink = Link.getBytes();
+        Link = "";
+        for(int ByteLinkIndex = 0; ByteLinkIndex < ByteLink.length;
+                                                   ByteLinkIndex++) {
             if(ByteLink[ByteLinkIndex] == (byte)'?')
                 break;
-            LINK += (char)ByteLink[ByteLinkIndex];
+            Link += (char)ByteLink[ByteLinkIndex];
         }
+        return Link;
     }
-
 
     /**
      * The DeleteDirectory() deletes the directory with path, that you printed<br>
@@ -87,6 +87,7 @@ public class Main {
         if(!(answer.toLowerCase().equals("y") ||
                 answer.toLowerCase().equals("yes")))
             System.exit(0);
+
         FileUtils.deleteDirectory(new File(SAVE_PATH + "/webparse"));
     }
 
@@ -104,7 +105,6 @@ public class Main {
         String WebPageType = Link.substring(Link.lastIndexOf('.'));
         if(WebPageType.indexOf('/') != -1)
             return ".html";
-
         return Link.substring(Link.lastIndexOf('.'));
     }
 
@@ -121,12 +121,11 @@ public class Main {
     private static void Initialize(String[] args) throws IOException {
 
         try {
-
             LINK = args[0];
             SAVE_PATH = args[1] + "/";
-
         } catch (Exception exception) {
-            System.out.println("ARGS IS NULL; ERROR IN Main.java; IN STR: 96");
+            TRACE("ARGS IS NULL", "Main.java",
+                   new Throwable().getStackTrace()[0].getLineNumber());
             System.exit(1);
         }
 
@@ -165,13 +164,12 @@ public class Main {
      */
     private static void PageDownloader(String Link) throws IOException {
 
-
         if(CheckDomain()) {
-
             try {
                 PageParser parser = new PageParser(LINK, SAVE_PATH);
             } catch (Exception exception) {
-                System.out.println(exception.getMessage() + "\nIN FILE: Main.java; IN STR: 68");
+                TRACE(exception.getMessage(), "Main.java",
+                        new Throwable().getStackTrace()[0].getLineNumber());
             }
         }
 
@@ -189,11 +187,32 @@ public class Main {
      * </ul>
      * return meaning: void
      */
-    private static void SimplePageDownloader(String FileName) throws IOException {
-
+    private static void SimplePageDownloader(String FileName)
+                                             throws IOException {
         URL url = new URL(LINK);
         URLConnection connection = url.openConnection();
         InputStream stream = url.openStream();
         Files.copy(stream, Paths.get("webparse/" + FileName + WEBPAGE_TYPE));
+    }
+
+    /**
+     * The TRACE(String, String, int) displays warnings and errors.<br><br>
+     * Params:
+     * <ul>
+     * <li>Message - message of warning or error</li>
+     * <li>Class - name of class</li>
+     * <li>Line - number of line</li>
+     * </ul>
+     * return meaning: void
+     */
+    public static void TRACE(String Message, String Class,
+                                                 int Line)  {
+        System.out.println();
+        System.out.println("###############################");
+        System.out.println("-------------TRACE-------------");
+        System.out.println("Exception/Warning: " +   Message);
+        System.out.println("Class: "             +     Class);
+        System.out.println("Line: "              +      Line);
+        System.out.println("###############################");
     }
 }

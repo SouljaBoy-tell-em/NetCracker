@@ -27,6 +27,7 @@ public class PageParser {
     public PageParser() {
         this.Resources = new ArrayList<>();
     }
+
     public PageParser(String link, String SAVE_PATH) throws IOException {
 
         this.link = link;
@@ -39,29 +40,46 @@ public class PageParser {
         ParseBlock("script");
         ParseBlock("link");
 
-        for(int IndexResource = 0; IndexResource < Resources.size(); IndexResource++) {
+        Distribution();
+        CreateHTML();
+    }
 
-            try {
-                Save(Resources.get(IndexResource));
-            } catch (Exception e) {
-                System.out.println(e.getMessage() + "\nIN FILE: PageParser.java; IN STR: 45");
-            }
-        }
-
-        document = Jsoup.connect(link).get();
-        ReplacePath("img", "src");
-        ReplacePath("link", "href");
-        ReplacePath("script", "src");
+    /**
+     * The CreateHTML() function creates an HTML file with resource tags,<br>
+     * whose paths are replaced with local ones and are located in a folder<br>
+     * structure.<br><br>
+     * return meaning: void
+     */
+    private void CreateHTML() {
 
         try {
 
             String HTMLBuffer = document.html();
             new File(SAVE_PATH + "/webparse").mkdirs();
-            FileWriter writer = new FileWriter(SAVE_PATH + "/webparse/main.html", true);
+            FileWriter writer = new FileWriter(SAVE_PATH +
+                              "/webparse/main.html", true);
             writer.write(HTMLBuffer);
             writer.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage() + " \nIN FILE: PageParser.java; IN STR: 68");
+        } catch (Exception exception) {
+            Main.TRACE(exception.getMessage(), "PageParser.java",
+                    new Throwable().getStackTrace()[0].getLineNumber());
+        }
+    }
+
+    /**
+     * The Distribution() saves and distributes files between them folders.<br><br>
+     * return meaning: void
+     */
+    private void Distribution() {
+
+        for(int IndexResource = 0; IndexResource < Resources.size();
+                                                    IndexResource++) {
+            try {
+                Save(Resources.get(IndexResource));
+            } catch (Exception exception) {
+                Main.TRACE(exception.getMessage(), "PageParser.java",
+                        new Throwable().getStackTrace()[0].getLineNumber());
+            }
         }
     }
 
@@ -98,7 +116,7 @@ public class PageParser {
 
     /**
      * The ParseFile(Element, String) adds the link to the file in the resources<br>
-     * list, which will be parsed later.<br><br>
+     * list, which will be parsed later and update path for already local file.<br><br>
      * Params:
      * <ul>
      * <li>element - element from the ParseBlock(String)</li>
@@ -108,44 +126,30 @@ public class PageParser {
      */
     private void ParseFile(Element element, String AttrName) {
 
-        String LinkPath = element.attr(AttrName);
-        int LinkPathLastIndex = LinkPath.lastIndexOf('/');
-        if(LinkPath.length() != 0) {
+        if(element.absUrl(AttrName).length() != 0) {
 
-            if(LinkPath.substring(0, 5).equals("https") != true)
-                Resources.add(new LinkFile(element.absUrl(AttrName),
-                              LinkPath.substring(0, LinkPathLastIndex),
-                              LinkPath.substring(LinkPathLastIndex)));
-        }
-    }
+            try {
 
-    /**
-     * The ReplacePath(String, String) replaces the path in the HTML file with <br>
-     * a resource that has been downloaded to a local folder with <br>
-     * a folder structure. <br><br>
-     * Params:
-     * <ul>
-     * <li>TagName - tag of html file</li>
-     * <li>AttrName - name of attribute</li>
-     * </ul>
-     * return meaning: void
-     */
-    private void ReplacePath(String TagName, String AttrName) {
+                String Link = element.absUrl(AttrName);
+                Link = Main.ConvertLink(Link);
+                String PFLink = Link.substring(Link.indexOf("//") + 2);
+                int PFLinkSize = PFLink.length() - PFLink.substring(
+                        PFLink.lastIndexOf('/') + 1).length() - 1;
+                String LinkFilePath = PFLink.substring(0, PFLinkSize);
+                String LinkFileName =
+                        PFLink.substring(PFLink.lastIndexOf('/') + 1);
 
-        for(Element TagElement : document.select(TagName + "[" + AttrName + "]")) {
+                if(LinkFileName.indexOf('.') != -1) {
 
-            String tag = TagElement.attr(AttrName);
-            if(tag.substring(0, 2).equals("//"))
-                TagElement.attr(AttrName, "." + TagElement.attr(AttrName).substring(1));
-
-            else if(tag.substring(0, tag.indexOf('/')).equals("https:") == false) {
-
-                if(tag.charAt(0) != '/') {
-
-                    TagElement.attr(AttrName, "./" + TagElement.attr(AttrName));
-                    continue;
+                    Resources.add(new LinkFile(Link,
+                            LinkFilePath,
+                            LinkFileName));
+                    element.attr(AttrName,
+                            "./" + LinkFilePath + "/" + LinkFileName);
                 }
-                TagElement.attr(AttrName, "." + TagElement.attr(AttrName));
+            } catch (Exception exception) {
+                Main.TRACE(exception.getMessage(), "PageParser.java",
+                        new Throwable().getStackTrace()[0].getLineNumber());
             }
         }
     }
@@ -162,10 +166,11 @@ public class PageParser {
      */
     private void Save(LinkFile linkFile) throws IOException {
 
-        new File(SAVE_PATH + "/webparse" + linkFile.getPath()).mkdirs();
+        new File(SAVE_PATH + "/webparse/" + linkFile.getPath()).mkdirs();
         URL url = new URL(linkFile.getLink());
         URLConnection connection = url.openConnection();
         InputStream stream = url.openStream();
-        Files.copy(stream, Paths.get(SAVE_PATH + "/webparse" + linkFile.getPath() + linkFile.getName()));
+        Files.copy(stream, Paths.get(SAVE_PATH + "/webparse/" +
+                     linkFile.getPath() + "/" + linkFile.getName()));
     }
 }

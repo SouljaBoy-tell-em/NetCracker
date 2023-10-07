@@ -12,14 +12,8 @@ public class LinkFile {
         this.path = path;
         this.name = name;
 
-        System.out.println(link);
-
-        if(this.path.length() > 0) {
-            if(this.path.charAt(0) != '/')
-                this.path = "/" + this.path;
-
-            if(this.name.charAt(0) != '/')
-                this.name = "/" + this.name;
+        if(this.path.equals(this.name)) {
+            this.path = "/";
         }
     }
 
