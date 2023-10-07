@@ -1,5 +1,8 @@
+https://github.com/SouljaBoy-tell-em/NetCracker/assets/60592559/342d24a8-ee26-4fae-b8dc-b86405245760
+
 
 # URLDownloader
+
 This program allows you to parse a web page or a file by its link.
 
 ## English documentation:
